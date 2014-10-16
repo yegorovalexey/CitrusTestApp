@@ -1,99 +1,780 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="UTF-8">
+
+<meta property="og:title" content="РРЅС‚РµСЂРЅРµС‚ РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ. Р“Р°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹" />
+<meta property="og:description" content="Р­РєСЃРїРµСЂС‚ РЅР° СЂС‹РЅРєРµ СЃРјР°СЂС‚С„РѕРЅРѕРІ Рё РїР»Р°РЅС€РµС‚РѕРІ." />
+<meta property="og:image" content="http://www.citrus.ua/citrus-ua-og-image.jpg" />
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#D8601C">
+<link rel="apple-touch-icon" href="/img/icons/logo-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/logo-96x96.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/logo-96x96.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/logo-96x96.png">
+
+
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+<title>РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ вЂ” РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹.</title>
+
+
 <link	rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" />
-<link	rel="stylesheet" href="jquery/jqm-demos.css" />
+<link	rel="stylesheet" href="css/main.css" />
+<link	rel="stylesheet" href="css/owl.carousel.css" />
 
-<script src="jquery/jquery.js">
-</script>
-<script src="jquery/jquery.mobile-1.4.2.min.js">
-</script>
-<script>
-		$( document ).on( "pagecreate", "#main", function() {
+<script src="jquery/jquery.js"></script>
+<script src="jquery/jquery.mobile-1.4.2.js"></script>
+<!--<script src="jquery/jquery.touchSwipe.min.js"></script>-->
+<script src="jquery/owl.carousel.min.js"></script>
 
-			$( document ).on( "swipeleft swiperight", "#main", function( e ) {
-			e.stopImmediatePropagation();
-				// We check if there is no open panel on the page because otherwise
-				// a swipe to close the left panel would also open the right panel (and v.v.).
-				// We do this by checking the data that the framework stores on the page element (panel: open).
-				
-				console.log(e.type);
-				if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
-					if ( e.type === "swipeleft" ) {
-					
-						//$( "#nav-panel" ).panel( "open" );
-					} else if ( e.type === "swiperight" ) {
-						$( "#nav-panel" ).panel( "open" );
-					}
-				}
-			});
-		});
-		
-    </script>
+<!--<script src="jquery/jquery.lazyloadxt.js"></script>-->
+
+
+<!--<script src="jquery/jquery.mobile.lazyloader.min.js"></script>-->
+
+<script src="js/clean/lazylist.js"></script>
+<script src="js/clean/func.js"></script>
+<script src="js/clean/storage.js"></script>
+<script src="js/clean/basket.js"></script>
+<script src="js/clean/search.js"></script>
+<script src="js/clean/news.js"></script>
+<script src="js/clean/actions.js"></script>
+<script src="js/clean/events.js"></script>
+
+<!--<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js">
+	{
+    startOpened: true,
+    enableTrace: true
+	}
+</script>-->
+
 </head>
 <body class="ui-mobile-viewport ui-overlay-a" id="ui-page-top">
-<div data-role="page" id="main" class="jqm-demos ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active">
-	<div data-role="header" data-position="fixed" class="jqm-header" data-tap-toggle="false">
-		<a href="#nav-panel" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
-		<h1>Contact us</h1>
-		</div>
-		
-		 <div data-role="panel" data-display="overlay" data-theme="a"  id="nav-panel" class="jqm-navmenu-panel">
-        <ul data-role="listview">
-            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                <li><a href="#panel-responsive-page2">Accordion</a></li>
-                <li><a href="#panel-responsive-page2">Ajax Navigation</a></li>
-                <li><a href="#panel-responsive-page2">Autocomplete</a></li>
-                <li><a href="#panel-responsive-page2">Buttons</a></li>
-                <li><a href="#panel-responsive-page2">Checkboxes</a></li>
-                <li><a href="#panel-responsive-page2">Collapsibles</a></li>
-                <li><a href="#panel-responsive-page2">Controlgroup</a></li>
-                <li><a href="#panel-responsive-page2">Dialogs</a></li>
-                <li><a href="#panel-responsive-page2">Fixed toolbars</a></li>
-                <li><a href="#panel-responsive-page2">Flip switch toggle</a></li>
-                <li><a href="#panel-responsive-page2">Footer toolbar</a></li>
-                <li><a href="#panel-responsive-page2">Form elements</a></li>
-                <li><a href="#panel-responsive-page2">Grids</a></li>
-                <li><a href="#panel-responsive-page2">Header toolbar</a></li>
-                <li><a href="#panel-responsive-page2">Icons</a></li>
-                <li><a href="#panel-responsive-page2">Links</a></li>
-                <li><a href="#panel-responsive-page2">Listviews</a></li>
-                <li><a href="#panel-responsive-page2">Loader overlay</a></li>
-                <li><a href="#panel-responsive-page2">Navbar</a></li>
-                <li><a href="#panel-responsive-page2">Navbar, persistent</a></li>
-                <li><a href="#panel-responsive-page2">Pages</a></li>
-                <li><a href="#panel-responsive-page2">New</a></li>
-                <li><a href="#panel-responsive-page2">Popup</a></li>
-                <li><a href="#panel-responsive-page2">Radio buttons</a></li>
-                <li><a href="#panel-responsive-page2">Select</a></li>
-                <li><a href="#panel-responsive-page2">Slider, single</a></li>
-                <li><a href="#panel-responsive-page2">New</a></li>
-                <li><a href="#panel-responsive-page2">New</a></li>
-                <li><a href="#panel-responsive-page2">New</a></li>
-                <li><a href="#panel-responsive-page2">Text inputs & textarea</a></li>
-                <li><a href="#panel-responsive-page2">Transitions</a></li>
+
+<!-- Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="main" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a link="#nav-panel" data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#nav-panel" data-iconpos="notext"  class="ui-noshadow  ui-btn-inline  c_icon_contr" onclick="MobileUser.LoginPromt()">			
+			<i class="c_icon c_user"></i>			
+			</a>
+			<a link="#page-cart"  data-role="button"   class=" c_menu_btn ui-noshadow  vclick_link ui-btn-inline  c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>		
+	</div>		
+	<div data-role="panel" data-display="push" data-theme="b"  id="nav-panel" class="jqm-navmenu-panel" data-position-fixed="true">	
+        <ul data-role="listview"  data-inset="true">            
+			<li><a href="#main"  data-role="button" class="panel-menu-item"  ><i class="c_icon c_home"></i><div class="text">Р“Р»Р°РІРЅР°СЏ</div></a></li>
+			<li><a href="#products-list"  data-role="button"   class="panel-menu-item"   ><i class="c_icon c_catalog"></i><div class="text">РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ</div></a></li>
+			<li><a    class="panel-menu-item"   data-role="button"  ><i class="c_icon c_search"></i><div class="text" onclick="test_focus()">РџРѕРёСЃРє</div></a></li>
+			<li><a href="#actions-page"   data-role="button"   class="panel-menu-item"   ><i class="c_icon c_action"></i><div class="text">РђРєС†РёРё</div></a></li>
+			<li><a href="#news-page"   data-role="button"   class="panel-menu-item"   ><i class="c_icon c_news"></i><div class="text">РќРѕРІРѕСЃС‚Рё</div></a></li>
+			<li><a href="#page-cart"  data-role="button"   class="panel-menu-item"    ><i class="c_icon c_basket_simple"></i><div class="text">РљРѕСЂР·РёРЅР°</div></a></li>
+			
+			<li><a href="http://club.citrus.ua" target="_blank"  data-role="button"   class="panel-menu-item"   ><i class="c_icon c_club"></i><div class="text">Р¦РёС‚СЂСѓСЃ РєР»СѓР±</div></a></li>
+			<li><a href="#maps-page"   data-role="button"   class="panel-menu-item"   ><i class="c_icon c_shops"></i><div class="text">РњР°РіР°Р·РёРЅС‹ Р¦РёС‚СЂСѓСЃ</div></a></li>
+			
+			
+			<li><a href="http://support.citrus.ua/" target="_blank"  data-role="button"   class="panel-menu-item"  ><i class="c_icon c_contactus"></i><div class="text">РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ</div></a></li>
+			<!--http://mediacdn.siteheart.com/widget/sh/20140729173412/html/popup.html?widget_id=668014&sh_lang=ru&hostname=www.citrus.ua&uid=shi_2&sh_mode=chatpopup 
+			http://static.siteheart.com/widget/sh/20140916164314/html/popup.html?widget_id=668014&sh_lang=ru&hostname=m.citrus.ua&uid=shi_6&sh_mode=chatpopup
+			-->
+			<li><a href="/online.html" target="_blank"  data-role="button"  class="panel-menu-item"  ><i class="c_icon c_online"></i><div class="text">РћРЅР»Р°Р№РЅ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚</div></a></li>
+			
         </ul>
     </div>
-	
+		
 		<div data-role="content">
-			С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание систем массового участия. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. С другой стороны реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке форм развития. Таким образом консультация с широким активом позволяет оценить значение существенных финансовых и административных условий.
-С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения новых предложений. Повседневная практика показывает, что новая модель организационной деятельности требуют от нас анализа форм развития. Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Разнообразный и богатый опыт рамки и место обучения кадров требуют определения и уточнения модели развития. Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.
-Значимость этих проблем настолько очевидна, что рамки и место обучения кадров играет важную роль в формировании систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке форм развития. Не следует, однако забывать, что консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения существенных финансовых и административных условий. Разнообразный и богатый опыт рамки и место обучения кадров способствует подготовки и реализации новых предложений.
-Товарищи! сложившаяся структура организации играет важную роль в формировании существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
-Равным образом реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Не следует, однако забывать, что укрепление и развитие структуры в значительной степени обуславливает создание модели развития. С другой стороны реализация намеченных плановых заданий позволяет оценить значение форм развития. С другой стороны укрепление и развитие структуры позволяет выполнять важные задания по разработке форм развития.
-Товарищи! рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Разнообразный и богатый опыт рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании форм развития.
-Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации дальнейших направлений развития. Идейные соображения высшего порядка, а также сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Товарищи! дальнейшее развитие различных форм деятельности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Товарищи! консультация с широким активом влечет за собой процесс внедрения и модернизации систем массового участия. Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения новых предложений.
-Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение соответствующий условий активизации.
-С другой стороны постоянный количественный рост и сфера нашей активности требуют от нас анализа модели развития. Равным образом консультация с широким активом требуют от нас анализа форм развития. С другой стороны рамки и место обучения кадров позволяет оценить значение соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание форм развития. Равным образом укрепление и развитие структуры представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
+		
+			
+			<div style="padding:0 0.3rem;" id="search_contaner">
+			<i class="c_icon search-input-icon"></i>
+			<input type="text" class="search-input" id="main-search-input" autocomplete="off" name="password" id="search" value="" placeholder="РџРѕРёСЃРє">
+			<i class="c_icon voice-input-icon"></i>
+		</div>
+		<div class="owl-carousel">
+            <div class="item">
+              <img src="http://www.citrus.ua/upload/iblock/380/7-lg-l80.jpg">
+            </div>
+			
+			<div class="item">
+              <img src="http://www.citrus.ua/upload/iblock/24f/xiaomi-mi3-slider.jpg">
+            </div>
+          </div>
+
+			<ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview">				
+			</ul>
+            <div class="product-card-module-cr ">
+				<a href="#products-list"><div id="product-card-info" class="product-card-module main-module module first link"><i class="c_icon c_catalog gray main_page_icon"></i>Р’СЃРµ С‚РѕРІР°СЂС‹</div></a>
+			</div>
+            <div class="product-card-module-cr  module-open">
+				<div id="product-card-info" class="product-card-module main-module module"  onclick="moduletoggle(this);"><i class="c_icon c_lider gray main_page_icon"></i>Р›РёРґРµСЂС‹ РїСЂРѕРґР°Р¶</div>
+				<div class="product-card-info-content">
+                    <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-lead">
+                       
+                    </ul>
+                </div>
+			</div>
+            <div class="product-card-module-cr  module-open" >
+				<div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_super gray main_page_icon"></i>РЎСѓРїРµСЂС†РµРЅР°</div>
+				<div class="product-card-info-content">
+                    <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-super">
+                       
+                    </ul>
+                </div>
+			</div>	
+            <div class="product-card-module-cr  module-open" >
+				<div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_new gray main_page_icon"></i>РќРѕРІРёРЅРєРё</div>
+				<div class="product-card-info-content">
+                    <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-new">
+                       
+                    </ul>
+                </div>
+			</div>
+             <div class="product-card-module-cr module-close last" >
+				<div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_soon gray main_page_icon"></i>РЎРєРѕСЂРѕ РІ РїСЂРѕРґР°Р¶Рµ</div>
+				<div class="product-card-info-content">
+                    <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-soon">
+                       
+                    
+                    </ul>
+                </div>
+			</div>	
+            <div class="product-card-module-cr ">
+				<a href="#actions-page"><div id="product-card-info" class="product-card-module main-module module link"><i class="c_icon c_action gray main_page_icon"></i>РќР°С€Рё Р°РєС†РёРё</div></a>
+			</div>
+            <div class="product-card-module-cr last">
+				<a href="#news-page"><div id="product-card-info" class="product-card-module main-module module link"><i class="c_icon c_news gray main_page_icon"></i>РќРѕРІРѕСЃС‚Рё</div></a>
+			</div>		
+            <div style="text-align: center;padding:16px">
+				<h2>РЎР»СѓР¶Р±Р° РїРѕРґРґРµСЂР¶РєРё РєР»РёРµРЅС‚РѕРІ</h2>
+				<a href="tel:0800501522" class="btn ui-link"><button id="product-card-tel-btn" class="tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
+			</div>	
+						
+		</div>	
+		
+				<div class="copy_links copy">		
+					<a href="http://www.citrus.ua/?dmode=1">РџРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ</a>	
+					<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+					<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+				</div>	
+		<div class="copy">			
+			В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+		</div>	
+</div>
+<!-- / Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РљРѕРЅРµС†-->
+
+
+
+
+
+
+
+<!-- РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="products-list" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-products-list" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			
+			<a link="#page-cart"  data-role="button"   class=" c_menu_btn ui-noshadow  vclick_link ui-btn-inline  c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>		
+	</div>	
+ <div class="navPanelChild" id="nav-panel-products-list"></div>
+		
+		<div data-role="content">
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="products-listview">				
+			</ul>				
+		</div>		
+<div data-role="footer" data-position="fixed" id="catalog-footer" style="display: none">
+  
+    <div data-role="navbar">
+        <ul>
+            <li><a onclick="LoadSortItems();" id="sort_btn"> <i class="c_icon  c_sort gray c_ibtn"> </i> РЎРѕСЂС‚РёСЂРѕРІРєР°</a></li>
+            <li><a  id="filter_btn"> <i class="c_icon c_filter gray c_ibtn"></i>Р¤РёР»СЊС‚СЂ</a></li>
+
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+<!-- / РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ РљРѕРЅРµС†-->
+<!-- РЎРѕСЂС‚РёСЂРѕРІРєР° С‚РѕРІР°СЂРѕРІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="sort-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" data-rel="back"  class="ui-noshadow" >			
+			<i class="c_icon c_left_arrow"></i>			
+		</a>
+		<h1 class="leftsideh1"><a data-rel="back" id="sort-page-h1">РЎРѕСЂС‚РёСЂРѕРІРєР° С‚РѕРІР°СЂРѕРІ</a></h1>
+			
+	</div>			
+		<div data-role="content" onclick="">
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="sort-listview">		
+					
+			</ul>				
+		</div>	
+		<div data-role="footer" data-position="fixed" id="sort-footer" >  
+		    <div data-role="navbar">
+		        <ul>
+		           <li><a onclick="FilterEnums.ClearSort();$.mobile.back();">РЎР±СЂРѕСЃРёС‚СЊ</a></li>
+		            <li><a onclick="FilterEnums.ApplySort();$.mobile.back();">РџСЂРёРјРµРЅРёС‚СЊ</a></li>
+
+		        </ul>
+		    </div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+<!-- / РЎРѕСЂС‚РёСЂРѕРІРєР° С‚РѕРІР°СЂРѕРІ РљРѕРЅРµС†-->
+
+
+<!-- Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="filter-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" data-rel="back"  class="ui-noshadow" >			
+			<i class="c_icon c_left_arrow"></i>				
+		</a>
+		<h1 class="leftsideh1"><a data-rel="back" id="filter-page-h1">Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ</a></h1>
+			
+	</div>			
+		<div data-role="content" onclick="">
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="filter-listview">				
+			</ul>				
+		</div>	
+		<div data-role="footer" data-position="fixed" id="filter-footer" >  
+		    <div data-role="navbar">
+		        <ul>
+		            <li><a onclick="FilterEnums.Clear();$.mobile.back();"> РЎР±СЂРѕСЃРёС‚СЊ</a></li>
+		            <li><a onclick="$.mobile.back();"> РџСЂРёРјРµРЅРёС‚СЊ</a></li>
+
+		        </ul>
+		    </div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+<!-- / Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ РљРѕРЅРµС†-->
+<!-- Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="filter-values-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" data-rel="back"  class="ui-noshadow" >			
+			<i class="c_icon c_left_arrow"></i>				
+		</a>
+		<h1 class="leftsideh1"><a data-rel="back" id="filter_prop_name">Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ: СЃРІРѕР№СЃС‚РІР°</a></h1>
+			
+	</div>			
+		<div data-role="content" onclick="">
+            <ul data-role="listview" data-theme="b"  data-2inset="true"   id="filter-props-values-listview">				
+			</ul>				
+		</div>	
+		<div data-role="footer" data-position="fixed" id="filter-values-footer" >  
+		    <div data-role="navbar">
+		        <ul>
+		            <li><a onclick="$.mobile.back();"> РћС‚РјРµРЅР°</a></li>
+		            <li><a onclick="SaveSelectedEnums();"> РћРљ</a></li>
+
+		        </ul>
+		    </div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+<!-- Р¤РёР»СЊС‚СЂ С‚РѕРІР°СЂРѕРІ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ РќР°С‡Р°Р»Рѕ -->
+
+
+
+
+
+
+<!-- РљР°СЂС‚РѕС‡РєР° С‚РѕРІР°СЂР° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="product-card" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-product-card" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu "></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>	
+		</div>
+	</div>		
+ <div class="navPanelChild" id="nav-panel-product-card"></div>
+		<div  id="product-card-content" data-role="content" >
+			<div class="content-padding">
+	             <h2 id="product-card-name">РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°</h2>	
+				 <div class="product-card-code-cr">
+				 	РљРѕРґ С‚РѕРІР°СЂР°: <span id="product-card-code"></span>					
+				 </div>			 
+			</div>	 
+			<input type="hidden" id="current_product_id">
+			<input type="hidden" id="current_product_price">
+			<div id="product-card-images-contaner"> </div>
+			
+			<div id="product-card-variations"></div>	
+			  
+			<hr>
+			<div class="content-padding">	
+			<div id="product-card-prices"></div>
+			<div id="product-card-status"></div>
+			
+			
+	            <button  id="product-card-buy-btn" class="ui-btn ui-corner-all green_btn" style="display:none"><i class="c_icon c_basket_simple c_ibtn"></i>	 РљСѓРїРёС‚СЊ</button>
+				<button  id="product-card-pre-btn" class="ui-btn ui-corner-all green_btn" style="display:none" onclick="OpenPreorderPage()">	 Р—Р°РєР°Р·Р°С‚СЊ</button>
+
+				<div id="citrus_club" class="citrus_club"></div>
+				
+				<div id="product-card-delivery">
+					<img src="http://www.citrus.ua/images/pic7/free-delivery-slider.jpg" title="Р‘РµСЃРїР»Р°С‚РЅР°СЏ РґРѕСЃС‚Р°РІРєР°! РћРїР»Р°С‚Р° РїСЂРё РїРѕР»СѓС‡РµРЅРёРё!" border="0" style="
+    max-width: 100%;
+    margin: 2rem 0;
+">
+				</div>
+			</div>	
+
+			
+			
+
+			<div class="product-card-module-cr first">
+				<a data-transition="slide" id="product-card-props-link"  data-ajax=false><div id="product-card-info" class="product-card-module main-module module link">РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё</div></a>
+			</div>
+			 <div class="product-card-module-cr ">
+				<a data-transition="slide" id="product-card-info-link"  data-ajax=false><div id="product-card-info" class="product-card-module main-module module link">РћРїРёСЃР°РЅРёРµ</div></a>
+			</div>
+			
+			
+			<div id="accs_container">
+				<div class="list-head-module  content-padding" >РђРєСЃРµСЃСЃСѓР°СЂС‹</div>				
+                    <ul data-role="listview" data-theme="b" data-2inset="true" id="accs-listview">
+                       
+                    </ul>                
+			</div>
+			
+				
+		  <div style="text-align: center;" class="content-padding">
+				<h2>РЎР»СѓР¶Р±Р° РїРѕРґРґРµСЂР¶РєРё РєР»РёРµРЅС‚РѕРІ</h2>
+				<a href="tel:0800501522" class="btn ui-link"><button id="product-card-tel-btn" class="tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
+			</div>	
+						
+		</div>	
+		<hr>
+			<div class="copy_links copy">			
+				<a href="#" id="card_dmode_link" rel="external">РџРѕР»РЅР°СЏ РІРµСЂСЃРёСЏ</a>
+				<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+				<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+			</div>	
+			<div class="copy">			
+			В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+			</div>			
+			
+</div>
+<!-- / РљР°СЂС‚РѕС‡РєР° С‚РѕРІР°СЂР° РљРѕРЅРµС†-->
+
+
+
+
+
+
+
+<!-- РљРѕСЂР·РёРЅР° С‚РѕРІР°СЂРѕРІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="page-cart" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-cart" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>					
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+			
+	</div>		
+ <div class="navPanelChild" id="nav-panel-cart"></div>
+		
+		<div data-role="content" >
+			<div class="content-padding">
+	            <h2 style="float: left;">РњРѕСЏ РєРѕСЂР·РёРЅР°</h2>
+				<div class="total_price" id="total_price"></div>
+	            <button class="ui-btn ui-corner-all green_btn" id="order-make-btn" onclick="MakeOrder()">РћС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·</button>
+				<div id="cart-status"></div>				
+			</div>
+			
+			<ul data-role="listview" data-theme="b" data-2inset="true" id="cart-list">				
+				</ul>
+			<div  class="content-padding" style="text-align: right">
+				<a data-role="button" class="mini_btn blue" data-inline="true" onclick="EnableBasketEditMode()" id="cart_edit_button">Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ</a><br>
+
+			</div>
+		</div>		
+</div>
+<!-- / РљРѕСЂР·РёРЅР° С‚РѕРІР°СЂРѕРІ РљРѕРЅРµС†-->
+
+<!-- РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="page-order" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-order" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+			
+	</div>		
+ <div class="navPanelChild" id="nav-panel-order"></div>
+		
+		<div data-role="content" id="page-order-content">
+			<div class="content-padding">
+	            <h2 style="">РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°</h2>  							
+			</div>
+			
+			<div class="content-padding">
+				<div id="order_fio_name_contaner" style="display:none"><b>Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, <span id="order_fio_name"></span>!</b> <br>Р Р°РґС‹ СЃРЅРѕРІР° Р’Р°СЃ РІРёРґРµС‚СЊ.</div>
+				<div id="order_fio_none_contaner"  style="display:none">
+					<div>РЎРѕРІРµСЂС€Р°СЏ РїРѕРєСѓРїРєСѓ, Р’С‹ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃС‚Р°РЅРѕРІРёС‚РµСЃСЊ СѓС‡Р°СЃС‚РЅРёРєРѕРј Р¦РёС‚СЂСѓСЃ РљР»СѓР±Р°</div>
+					<div>РџРѕР»СѓС‡Р°Р№С‚Рµ Рё РЅР°РєР°РїР»РёРІР°Р№С‚Рµ Р±РѕРЅСѓСЃРЅС‹Рµ РіСЂРЅ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РёС… РЅР° РїРѕРєСѓРїРєСѓ С‚РѕРІР°СЂРѕРІ.</div>
+				</div>
+			</div>
+			
+			
+			<div class="content-padding" style="margin-top: 13px;">
+				
+				<div style="color: #F6731B;">Р’Р°С€Рё РєРѕРЅС‚Р°РєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ:</div>
+				<div><input type="text" placeholder="Р¤РРћ" id="order_fio"  maxlength="40" autocomplete="on" ></div>
+				
+				<div><input type="text" placeholder="Р“РѕСЂРѕРґ" id="order_city"  maxlength="20" autocomplete="on" ></div>
+				
+				<div><input type="text" placeholder="РўРµР»РµС„РѕРЅ" id="order_tel"   autocomplete="on" disabled></div>
+				
+				<div><input type="text" placeholder="Email" id="order_email"   autocomplete="on" ></div>
+				
+				 <button class="ui-btn ui-corner-all green_btn" id="order-make-btn" onclick="StartMakeOrderTry();">Р—Р°РєР°Р·Р°С‚СЊ</button>
+			</div>
+			<hr>
+			<div class="copy_links copy">			
+				<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+				<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+			</div>	
+			<div class="copy">			
+			В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+			</div>	
+			
+			
+		</div>	
+		
+</div>
+<!-- / РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р° РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° СЃРїР°СЃРёР±Рѕ РѕС„РѕСЂРјР»РµРЅРЅРѕРіРѕ Р·Р°РєР°Р·Р° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="order-done-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-order-done-page" class="ui-noshadow cit_panel_href" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		
+		</a>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-order-done-page"></div>
+		
+		<div data-role="content" >
+				<div class="content-padding">
+					<h2>РЎРїР°СЃРёР±Рѕ!</h2>
+					<div style="margin-bottom: 1rem;">Р’Р°С€ Р·Р°РєР°Р· в„– B-<span id="order_done_page_order_id"></span> РїСЂРёРЅСЏС‚.</div>					
+					<div style="margin-bottom: 1rem;">Р”Р»СЏ СѓС‚РѕС‡РЅРµРЅРёСЏ РЅР°Р»РёС‡РёСЏ С‚РѕРІР°СЂР° РїРѕР¶Р°Р»СѓР№СЃС‚Р° РґРѕР¶РґРёС‚РµСЃСЊ Р·РІРѕРЅРєР° РѕС‚ РјРµРЅРµРґР¶РµСЂР° call-С†РµРЅС‚СЂР°.</div>	
+					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="green_btn ui-btn ui-corner-all">РџСЂРѕРґРѕР»Р¶РёС‚СЊ РїРѕРєСѓРїРєРё</button></a>		
+				</div>
+				<hr>
+				<div class="copy_links copy">			
+					<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+					<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+				</div>	
+				<div class="copy">	
+				
+				В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+				</div>	
+		</div>	
+			
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° СЃРїР°СЃРёР±Рѕ РѕС„РѕСЂРјР»РµРЅРЅРѕРіРѕ Р·Р°РєР°Р·Р° РљРѕРЅРµС†-->
+
+
+
+<!-- РћС„РѕСЂРјР»РµРЅРёРµ РїСЂРµРґР·Р°РєР°Р·Р° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="page-preorder" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-preorder" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+			
+	</div>		
+ <div class="navPanelChild" id="nav-panel-preorder"></div>
+		
+		<div data-role="content" id="page-preorder-content">
+			<div class="content-padding">
+	            <h2 style="">РћС„РѕСЂРјР»РµРЅРёРµ РїСЂРµРґР·Р°РєР°Р·Р°</h2>  							
+			</div>
+			
+			<div class="content-padding">
+			
+				<div id="preorder_product_contaner"  >
+					
+				</div>
+			</div>
+			
+			<input type="hidden"  id="preorder_product_id" >
+			
+			<div class="content-padding" style="margin-top: 13px;">
+				
+				<div style="color: #F6731B;">Р’Р°С€Рё РєРѕРЅС‚Р°РєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ:</div>
+				<div><input type="text" placeholder="Р¤РРћ" id="preorder_fio"  maxlength="40" autocomplete="on" ></div>
+				
+				<div><input type="text" placeholder="Р“РѕСЂРѕРґ" id="preorder_city"  maxlength="20" autocomplete="on" ></div>
+				
+				<div><input type="text" placeholder="РўРµР»РµС„РѕРЅ" id="preorder_tel"   autocomplete="on"></div>
+				
+				<div><input type="email" placeholder="Email" id="preorder_email"   autocomplete="on" ></div>
+				
+				<div><input type="text" placeholder="РљРѕРјРјРµРЅС‚Р°СЂРёР№" id="preorder_comment"   autocomplete="on"></div>
+				
+				
+				 <button class="ui-btn ui-corner-all green_btn" id="preorder-make-btn" onclick="StartMakePreOrderTry();">Р—Р°РєР°Р·Р°С‚СЊ</button>
+			</div>
+			<hr>
+			<div class="copy_links copy">			
+				<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+				<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+			</div>	
+			<div class="copy">			
+			В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+			</div>	
+			
+			
+		</div>	
+		
+</div>
+<!-- / РћС„РѕСЂРјР»РµРЅРёРµ РїСЂРµРґР·Р°РєР°Р·Р° РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° СЃРїР°СЃРёР±Рѕ РѕС„РѕСЂРјР»РµРЅРЅРѕРіРѕ РїСЂРµРґР·Р°РєР°Р·Р° РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="preorder-done-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-preorder-done-page" class="ui-noshadow cit_panel_href" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="fa_custom_logo"></div></h1>
+		
+		</a>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-preorder-done-page"></div>
+		
+		<div data-role="content" >
+				<div class="content-padding">
+					<h2>РЎРїР°СЃРёР±Рѕ!</h2>
+					<div style="margin-bottom: 1rem;">Р’Р°С€ РїСЂРµРґР·Р°РєР°Р· в„– <span id="order_done_page_preorder_id"></span> РїРѕР»СѓС‡РµРЅ Рё РѕС‚РїСЂР°РІР»РµРЅ РІ РѕР±СЂР°Р±РѕС‚РєСѓ! РњС‹ СЃРІСЏР¶РµРјСЃСЏ СЃ Р’Р°РјРё, РєР°Рє С‚РѕР»СЊРєРѕ С‚РѕРІР°СЂ РїРѕСЏРІРёС‚СЃСЏ РІ РЅР°Р»РёС‡РёРё.</div>	
+					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="green_btn ui-btn ui-corner-all">РџСЂРѕРґРѕР»Р¶РёС‚СЊ РїРѕРєСѓРїРєРё</button></a>		
+				</div>
+				<hr>
+				<div class="copy_links copy">			
+					<a onclick="Showtextpage(133572)">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a>
+					<a onclick="Showtextpage(133564)">Р“Р°СЂР°РЅС‚РёСЏ</a>
+				</div>	
+				<div class="copy">	
+				
+				В©	РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р¦РёС‚СЂСѓСЃ -РіР°РґР¶РµС‚С‹ Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹ 2005-2014
+				</div>	
+		</div>	
+			
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° СЃРїР°СЃРёР±Рѕ РѕС„РѕСЂРјР»РµРЅРЅРѕРіРѕ Р·Р°РєР°Р·Р° РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="search-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-search-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>		
+	</div>		
+ <div class="navPanelChild" id="nav-panel-search-page"></div>
+		
+		<div data-role="content">
+		<div style="padding:0 0.3rem;" id="search_contaner">
+			<i class="c_icon search-input-icon"></i>
+			<input type="text" class="search-input" id="search-page-search-input" name="password" id="search" value="" placeholder="РџРѕРёСЃРє">
+			<i class="c_icon voice-input-icon"></i>
 		</div>
 		
-		<div data-role="footer"data-position="fixed" data-tap-toggle="false" class="jqm-footer" >
-		<p>jQuery Mobile Demos version <span class="jqm-version">1.4.2</span></p>
-		<p>Copyright 2014 The jQuery Foundation</p>
-		</div>
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="search-listview">				
+			</ul>	
+			<!--<a onclick="test_focus();" class="btn ui-link"><button id="product-card-tel-btn" class="green_btn ui-btn ui-corner-all">РџРѕРёСЃРє</button></a>	 --> 			
+		</div>		
 </div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ РљРѕРЅРµС†-->
+
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РґРµС‚Р°Р»СЊРЅС‹Р№ С‚РµРєСЃС‚ РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="text-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-text-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
+		<i class="c_icon c_basket"></i>			
+		</a>
+			
+	</div>		
+ <div class="navPanelChild" id="nav-panel-text-page"></div>
+		
+		<div data-role="content" class="content-padding" id="text-page-content">
+					
+		</div>		
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РґРµС‚Р°Р»СЊРЅС‹Р№ С‚РµРєСЃС‚ РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РђРІС‚РѕСЂРёР·Р°С†РёРё  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="login-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-login-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		
+		</a>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-login-page"></div>
+		
+		<div data-role="content" class="content-padding" id="login-page-content">
+			<div class="screen-center">
+				<h3>Р’Р°С€ РЅРѕРјРµСЂ РјРѕР±РёР»СЊРЅРѕРіРѕ С‚РµР»РµС„РѕРЅР°</h2>
+				<div class="phone_add"><input type="tel"  id="phone" maxlength="13" autocomplete="off"  value="+380" onkeyup="MobileUser.VerifyPhoneInput(this,'#sendCodeButton')"></div>
+				<button id="sendCodeButton" class="ui-btn ui-corner-all green_btn" onclick="MobileUser.Authorization_sendCode($('#phone').val());">Р”Р°Р»РµРµ</button>
+			</div>	
+		</div>		
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РђРІС‚РѕСЂРёР·Р°С†РёРё С‚РµРєСЃС‚ РљРѕРЅРµС†-->
+<!-- РЎС‚СЂР°РЅРёС†Р° РІРІРѕРґР° sms_code  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="sms-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-sms-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		
+		</a>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-sms-page"></div>
+		
+		<div data-role="content" class="content-padding" id="sms-page-content">
+				
+				<h3>Р’РІРµРґРёС‚Рµ РєРѕРґ РёР· РЎРњРЎ</h2>
+				<div><input type="tel" placeholder="" id="sms_code"  maxlength="4" autocomplete="off" ></div>
+				<button id="sms-code-btn" class="ui-btn ui-corner-all green_btn"  onclick="MobileUser.AuthorizeByCode($(this).attr('phone'),$('#sms_code').val());">Р’РѕР№С‚Рё</button>
+				
+		</div>		
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РІРѕРґР° sms_code  С‚РµРєСЃС‚ РљРѕРЅРµС†-->
+
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РЅРѕРІРѕСЃС‚РµР№  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="news-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-news-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-news-page"></div>
+		
+		<div data-role="content">		
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="news-listview">				
+			</ul>				
+		</div>		
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РЅРѕРІРѕСЃС‚РµР№  РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° Р°РєС†РёР№  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="actions-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-actions-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>	
+		</div>	
+	</div>		
+ <div class="navPanelChild" id="nav-panel-actions-page"></div>
+		
+		<div data-role="content">		
+            <ul data-role="listview" data-theme="b" data-2inset="true" id="actions-listview">				
+			</ul>				
+		</div>		
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° Р°РєС†РёР№ РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РјР°РіР°Р·РёРЅРѕРІ  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="maps-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-maps-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="c_menu_btn ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>	
+	</div>	
+<div class="navPanelChild" id="nav-panel-maps-page"></div>
+	<div data-role="content">		
+		<div id="map_canvas" style="width:100%; height:500px"></div>
+		<div id="toggleStreetView">РќР°Р·Р°Рґ</div>
+		<div id="pano" style="width:100%; height:500px"></div>
+		<ul data-role="listview" data-theme="b" data-2inset="true" id="maps-listview">				
+		</ul>
+	</div>
+</div>
+<!-- / РЎС‚СЂР°РЅРёС†Р° РјР°РіР°Р·РёРЅРѕРІ РљРѕРЅРµС†-->
+
+<!-- РЎС‚СЂР°РЅРёС†Р° РћРЅР»Р°Р№РЅ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚Р°  РќР°С‡Р°Р»Рѕ -->
+<div data-role="page" id="online-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
+	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+		<a data-iconpos="notext" link="#nav-panel-maps-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
+		<i class="c_icon c_menu"></i>			
+		</a>
+		<h1><div class="c_main_logo"></div></h1>
+		<div class="bnt-menu-panel-right">
+			<a link="#page-cart"  data-role="button"   class="c_menu_btn ui-noshadow vclick_link c_icon_contr">			
+			<i class="c_icon c_basket"></i>			
+			</a>
+		</div>	
+	</div>	
+<div class="navPanelChild" id="nav-panel-maps-page"></div>
+	<div data-role="content">		
+		<div id="online_wrap"></div>
+	</div>
+</div>
+<!-- / РћРЅР»Р°Р№РЅ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚Р° РљРѕРЅРµС†-->
+
+
+<div data-role="dialog" id="timeout">РћС€РёР±РєР°. РџСЂРѕРІРµСЂСЊС‚Рµ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РёРЅС‚РµСЂРЅРµС‚ ...</div>
+
+
+
 <script>
 </script>
 </body>
