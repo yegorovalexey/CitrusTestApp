@@ -28,10 +28,10 @@ float: left;
 
 /* Icon classes for HEADER  */
 .c_menu {
-background-image: url(/img/svg/white/ico-32.svg);
+background-image: url(img/svg/white/ico-32.svg);
 }
 .c_user {
-background-image: url(/img/svg/white/ico-18.svg);
+background-image: url(img/svg/white/ico-18.svg);
 width: 20px;
 height: 20px;
 background-size: 20px 20px;
@@ -41,106 +41,106 @@ margin-right: 6px;
 
 
 .c_basket {
-background-image: url(/img/svg/white/ico-04.svg);
+background-image: url(img/svg/white/ico-04.svg);
 background-color: #F8934F;
 border-radius: 5px;
 padding: 3px;
 background-position: 2px 2px;
 }
 .c_basket_simple {
-background-image: url(/img/svg/white/ico-04.svg);
+background-image: url(img/svg/white/ico-04.svg);
 }
 .c_home {
-background-image: url(/img/svg/white/ico-22.svg);
+background-image: url(img/svg/white/ico-22.svg);
 }
 .c_catalog {
-background-image: url(/img/svg/white/ico-10.svg);
+background-image: url(img/svg/white/ico-10.svg);
 }
 .c_catalog.gray {
-background-image: url(/img/svg/gray/ico-10.svg);
+background-image: url(img/svg/gray/ico-10.svg);
 }
 
 .c_search{	
-	background-image: url(/img/svg/white/ico-31.svg);
+	background-image: url(img/svg/white/ico-31.svg);
 }
 .c_action{	
-	background-image: url(/img/svg/white/ico-11.svg);
+	background-image: url(img/svg/white/ico-11.svg);
 }
 .c_action.gray{	
-	background-image: url(/img/svg/gray/ico-11.svg);
+	background-image: url(img/svg/gray/ico-11.svg);
 }
 .c_news{	
-	background-image: url(/img/svg/white/ico-27.svg);
+	background-image: url(img/svg/white/ico-27.svg);
 }
 .c_news.gray{	
-	background-image: url(/img/svg/gray/ico-27.svg);
+	background-image: url(img/svg/gray/ico-27.svg);
 }
 .c_club{
-	background-image: url(/img/svg/white/ico-13.svg);
+	background-image: url(img/svg/white/ico-13.svg);
 }
 .c_shops{
-	background-image: url(/img/svg/white/ico-33.svg);
+	background-image: url(img/svg/white/ico-33.svg);
 }
 .c_shops.gray{
-	background-image: url(/img/svg/gray/ico-33.svg);
+	background-image: url(img/svg/gray/ico-33.svg);
 }
 .c_contactus{
-	background-image: url(/img/svg/white/ico-29.svg);
+	background-image: url(img/svg/white/ico-29.svg);
 }
 .c_online{
-	background-image: url(/img/svg/white/ico-28.svg);
+	background-image: url(img/svg/white/ico-28.svg);
 }
 
 .c_lider{
-	background-image: url(/img/svg/white/ico-09.svg);
+	background-image: url(img/svg/white/ico-09.svg);
 }
 .c_lider.gray{
-	background-image: url(/img/svg/gray/ico-09.svg);
+	background-image: url(img/svg/gray/ico-09.svg);
 }
 .c_super{
-	background-image: url(/img/svg/white/ico-05.svg);
+	background-image: url(img/svg/white/ico-05.svg);
 }
 .c_super.gray{
-	background-image: url(/img/svg/gray/ico-05.svg);
+	background-image: url(img/svg/gray/ico-05.svg);
 }
 .c_new{
-	background-image: url(/img/svg/white/ico-25.svg);
+	background-image: url(img/svg/white/ico-25.svg);
 }
 .c_new.gray{
-	background-image: url(/img/svg/gray/ico-25.svg);
+	background-image: url(img/svg/gray/ico-25.svg);
 }
 .c_soon{
-	background-image: url(/img/svg/white/ico-17.svg);
+	background-image: url(img/svg/white/ico-17.svg);
 }
 .c_soon.gray{
-	background-image: url(/img/svg/gray/ico-17.svg);
+	background-image: url(img/svg/gray/ico-17.svg);
 }
 .c_phone{
-	background-image: url(/img/svg/white/ico-30.svg);
+	background-image: url(img/svg/white/ico-30.svg);
 }
 .c_phone.gray{
-	background-image: url(/img/svg/gray/ico-30.svg);
+	background-image: url(img/svg/gray/ico-30.svg);
 }
 
 .c_left_arrow{
-	background-image: url(/img/svg/white/ico-34.svg);
+	background-image: url(img/svg/white/ico-34.svg);
 }
 .c_left_arrow.gray{
-	background-image: url(/img/svg/gray/ico-34.svg);
+	background-image: url(img/svg/gray/ico-34.svg);
 }
 
 .c_sort{
-	background-image: url(/img/svg/white/ico-16.svg);
+	background-image: url(img/svg/white/ico-16.svg);
 }
 .c_sort.gray{
-	background-image: url(/img/svg/gray/ico-16.svg);
+	background-image: url(img/svg/gray/ico-16.svg);
 }
 
 .c_filter{
-	background-image: url(/img/svg/white/ico-20.svg);
+	background-image: url(img/svg/white/ico-20.svg);
 }
 .c_filter.gray{
-	background-image: url(/img/svg/gray/ico-20.svg);
+	background-image: url(img/svg/gray/ico-20.svg);
 }
 
 
@@ -153,7 +153,7 @@ position: absolute;
 color: #B2B2B2;
 left: 1rem;
 top: 1.2rem;
-background-image: url(/img/svg/gray/ico-31.svg);
+background-image: url(img/svg/gray/ico-31.svg);
 background-repeat: no-repeat;
 height: 13px;
 width: 13px;
@@ -164,7 +164,7 @@ position: absolute;
 color: #B2B2B2;
 right: 1rem;
 top: 0.7rem;
-background-image: url(/img/svg/gray/ico-24.svg);
+background-image: url(img/svg/gray/ico-24.svg);
 background-repeat: no-repeat;
 height: 25px;
 width:15px;
@@ -173,7 +173,7 @@ display: none;
 }
 
 .c_main_logo {
-background-image: url(/img/svg/logo_main.svg);
+background-image: url(img/svg/logo_main.svg);
 background-repeat: no-repeat;
 width:108px;
 height: 20px;
@@ -182,7 +182,7 @@ display: inline-block;
 
 .product-card-module:after, .ui-icon-carat-r:after{
 content: "";
-background-image: url(/img/svg/gray/arrow.svg);
+background-image: url(img/svg/gray/arrow.svg);
 background-repeat: no-repeat;
 background-color: transparent;
 position: absolute;
@@ -193,12 +193,12 @@ width: 22px;
 margin-top: -8px;
 }
 .module-open .product-card-module:after{
-	background-image:url(/img/svg/gray/arrow_up.svg);
+	background-image:url(img/svg/gray/arrow_up.svg);
 	margin-top: -5px;
 	right: 19px;
 }
 .module-close .product-card-module:after{
-	background-image:url(/img/svg/gray/arrow_down.svg);
+	background-image:url(img/svg/gray/arrow_down.svg);
 	margin-top: -5px;
 	right: 19px;
 }
@@ -247,14 +247,14 @@ position: relative;
 
 
 .fa_custom_search {
-background-image: url(/img/svg/searc.svg);
+background-image: url(img/svg/searc.svg);
 background-repeat: no-repeat;
 background-position-y: 0.4rem;
 background-position-x: 0.3rem;
 background-color: #F8934F;
 }
 .fa_custom_arrow_right {
-background-image: url(/img/svg/searc.svg);
+background-image: url(img/svg/searc.svg);
 background-repeat: no-repeat;
 background-position-y: 0.4rem;
 background-position-x: 0.3rem;
@@ -262,42 +262,42 @@ background-color: #F8934F;
 }
 
 .fa_custom_logo {
-background-image: url(/img/svg/logo.svg);
+background-image: url(img/svg/logo.svg);
 background-repeat: no-repeat;
 width:108px;
 height: 20px;
 display: inline-block;
 }
 .fa_custom_user  {
-background-image: url(/img/svg/user.svg);
+background-image: url(img/svg/user.svg);
 background-repeat: no-repeat;
 background-color: #F8934F;
 background-position: 0.4rem 0.3rem;
 border-radius: 5px;
 }
 .fa_custom_sort  {
-background-image: url(/img/svg/user.svg);
+background-image: url(img/svg/user.svg);
 background-repeat: no-repeat;
 background-color: #F8934F;
 background-position: 0.4rem 0.3rem;
 border-radius: 5px;
 }
 .fa_custom_filter  {
-background-image: url(/img/svg/user.svg);
+background-image: url(img/svg/user.svg);
 background-repeat: no-repeat;
 background-color: #F8934F;
 background-position: 0.4rem 0.3rem;
 border-radius: 5px;
 }
 .fa_custom_basket {
-background-image: url(/img/svg/basket.svg);
+background-image: url(img/svg/basket.svg);
 background-repeat: no-repeat;
 background-color: #F8934F;
 background-position: 0.25rem 0.38rem;
 border-radius: 5px;
 }
 .fa_custom_basket_btn {
-background-image: url(/img/svg/basket.svg);
+background-image: url(img/svg/basket.svg);
 background-repeat: no-repeat;
 border-radius: 5px;
 padding: 0;
@@ -309,7 +309,7 @@ top: 2px;
 }
 /*
 .product-card-module.link:after{
-    background-image: url(/img/svg/arrow.svg);
+    background-image: url(img/svg/arrow.svg);
     margin-top: -11px;
     right: 10px
    
