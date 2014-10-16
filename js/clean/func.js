@@ -19,9 +19,9 @@ function loadjscssfile(filename, filetype){
 }
 
 if(supportsSVG()){
-	loadjscssfile("/css/icons-svg.css","css");
+	loadjscssfile("css/icons-svg.css","css");
 }else{
-	loadjscssfile("/css/icons-png.css","css");
+	loadjscssfile("css/icons-png.css","css");
 }
 
 // Инициализация свайпа навигационного меню
