@@ -97,7 +97,7 @@ function LoadDefaultCatalog(category,position){
 	}		
 	
 	$.ajax({ 
-	  url: "ajax/catalog_lazy.php?position="+position_to_get+"&count=20"+request, 
+	  url: "http://m.citrus.ua/ajax/catalog_lazy.php?position="+position_to_get+"&count=20"+request, 
 	  type: "POST",
 	  dataType: 'json', 
 	  data: {data:JSON.stringify(json_props)},
@@ -304,7 +304,7 @@ function loadProductCard(id,owl){
 	}
 	
 	$.ajax({ 
-	  url: "ajax/product.php?id="+parseInt(id), 
+	  url: "http://m.citrus.ua/ajax/product.php?id="+parseInt(id), 
 	  dataType: 'json',
 	   async: false, 
 	  success: function( json ) {	
@@ -565,7 +565,7 @@ function LoadMainPageData(){
 		
 	
 	$.ajax({ 
-	  url: "ajax/main.php", 
+	  url: "http://m.citrus.ua/ajax/main.php", 
 	  dataType: 'json',
 	  async: true, 
 	  success: function( json ) {	
@@ -743,7 +743,7 @@ function LoadCardInfo(info){
 	if($('#product-card').attr("info_load")!="Y"){
 		$('#product-card').attr("info_load","N");
 		$.ajax({
-		  url: "ajax/on/product_info.php?id="+$('#product-card').attr("product_id"),
+		  url: "http://m.citrus.ua/ajax/on/product_info.php?id="+$('#product-card').attr("product_id"),
 		  beforeSend: function( xhr ) {
 		   ShowLoading();
 		  }
@@ -760,7 +760,7 @@ function LoadCardInfo(info){
 function LoadTextPage(id,data){
 		var send_data = data || "";
 		$.ajax({
-		  url: "ajax/on/text-page.php?id="+id+send_data,
+		  url: "http://m.citrus.ua/ajax/on/text-page.php?id="+id+send_data,
 		  beforeSend: function( xhr ) {
 		   ShowLoading();
 		  }
@@ -969,7 +969,7 @@ function ShowFilter(link,back){
 				json_props.push({"prop_id":key,"data":FilterEnums.props[key]});				
 	}
 	$.ajax({ 
-	  url: "/ajax/filter_params.php?link="+link, 
+	  url: "http://m.citrus.ua/ajax/filter_params.php?link="+link, 
 	  type: "POST",
 	  dataType: 'json', 
 	  data: {data:JSON.stringify(json_props)},
@@ -1015,7 +1015,7 @@ function ShowFilterEnums(id,name){
 				json_props.push({"prop_id":key,"data":FilterEnums.props[key]});				
 	}
 	$.ajax({ 
-	  url: "/ajax/filter_enums.php?id="+id, 
+	  url: "http://m.citrus.ua/ajax/filter_enums.php?id="+id, 
 	  type: "POST",
 	  dataType: 'json', 
 	  data: {data:JSON.stringify(json_props)}, 
