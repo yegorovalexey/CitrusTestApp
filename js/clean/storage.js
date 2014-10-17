@@ -9,7 +9,7 @@ function LocalStorage(){
 		return localStorage.getItem(key);
 	}
 	this.Set = function(key,value){
-		return localStorage.setItem(key, value);
+		localStorage.setItem(key, value);
 		return true;
 	}
 	
