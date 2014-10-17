@@ -6,7 +6,12 @@ function LocalStorage(){
 
 
 	this.Get = function(key){
-		return localStorage.getItem(key);
+		var value = localStorage.getItem(key);
+		if(value== null){
+			value = undefined;
+		}
+		
+		return value;
 	}
 	this.Set = function(key,value){
 		localStorage.setItem(key, value);
