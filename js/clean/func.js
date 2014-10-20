@@ -482,6 +482,7 @@ function ShowMessage(type){
 			text ="Проверьте соединение с интернет";
 			$.mobile.changePage('#lost-connection-page');
 			if(MobileUser.DeviceReady){
+				console.log(" ShowMessage  MobileUser.DeviceReady");
 				navigator.splashscreen.hide();
 			}
 			return;
