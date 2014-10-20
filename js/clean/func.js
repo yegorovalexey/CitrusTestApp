@@ -475,14 +475,15 @@ function loadProductCard(id,owl){
 }
 
 function ShowMessage(type){
-
+	
 	var text ="";
 	switch(type){
 		case 1:{
 			text ="Проверьте соединение с интернет";
 			$.mobile.changePage('#lost-connection-page');
-			navigator.splashscreen.hide();
-			
+			if(MobileUser.DeviceReady){
+				navigator.splashscreen.hide();
+			}
 			return;
 		}
 			
