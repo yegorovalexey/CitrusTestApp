@@ -36,6 +36,7 @@
 	<preference name="SplashScreenDelay" value="12000"/>
 
 	<gap:plugin name="org.apache.cordova.splashscreen" />
+	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
 	
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
