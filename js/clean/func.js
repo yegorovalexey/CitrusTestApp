@@ -467,7 +467,7 @@ function loadProductCard(id,owl){
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		 if(status == "timeout"){
 			
-			$.mobile.changePage('#timeout', 'pop', true, true);
+			ShowMessage(1);
 		 } 
 	  } 
 	});
@@ -478,8 +478,12 @@ function ShowMessage(type){
 
 	var text ="";
 	switch(type){
-		case 1:
+		case 1:{
 			text ="Проверьте соединение с интернет";
+			$.mobile.changePage('#lost-connection-page');
+			return;
+		}
+			
 			break;
 		case 2:
 			break;
@@ -629,7 +633,7 @@ function LoadMainPageData(){
 	  timeout: 8000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		 if(status == "timeout"){
-			$.mobile.changePage('#timeout', 'pop', true, true);
+			ShowMessage(1);
 		 } 
 	  } 
 	});
@@ -1002,7 +1006,7 @@ function ShowFilter(link,back){
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		 if(status == "timeout"){
-			$.mobile.changePage('#timeout', 'pop', true, true);
+			ShowMessage(1);
 		 } 
 	  } 
 	});		 
@@ -1050,7 +1054,7 @@ function ShowFilterEnums(id,name){
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		 if(status == "timeout"){
-			$.mobile.changePage('#timeout', 'pop', true, true);
+			ShowMessage(1);
 		 } 
 	  } 
 	});		 
