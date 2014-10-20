@@ -185,7 +185,7 @@ function LoadDefaultCatalog(category,position){
 			
 			product_list_page_loded = true;
 			ShowMessage(1);
-			location.reload();
+			//location.reload();
 		
 	  } 
 	});
@@ -481,6 +481,8 @@ function ShowMessage(type){
 		case 1:{
 			text ="Проверьте соединение с интернет";
 			$.mobile.changePage('#lost-connection-page');
+			navigator.splashscreen.hide();
+			
 			return;
 		}
 			
