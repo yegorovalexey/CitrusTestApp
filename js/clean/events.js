@@ -94,7 +94,9 @@ $( document ).on( "pageshow", "#sort-page", function() {
 	$('#sort-listview').listview("refresh");
 });
 $( document ).on( "pageshow", "#main", function() {
+if(MobileUser.DeviceReady){
 	navigator.splashscreen.hide();
+}
 	ShowLoading();
 	LoadMainPageData();		 
 });
