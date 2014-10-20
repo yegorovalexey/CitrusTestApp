@@ -181,12 +181,12 @@ function LoadDefaultCatalog(category,position){
 		 }, 
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
-		 if(status == "timeout"){
+		
 			
 			product_list_page_loded = true;
 			ShowMessage(1);
 			location.reload();
-		 }
+		
 	  } 
 	});
 
@@ -465,10 +465,10 @@ function loadProductCard(id,owl){
 		}, 
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
-		 if(status == "timeout"){
+		
 			
 			ShowMessage(1);
-		 } 
+		 
 	  } 
 	});
 
@@ -567,12 +567,13 @@ var main_images  = false;
 function LoadMainPageData(){
 	if(!main_page_load){
 		
-	
+	console.log("LoadMainPageData");	
 	$.ajax({ 
 	  url: "http://m.citrus.ua/ajax/main.php", 
 	  dataType: 'json',
 	  async: true, 
 	  success: function( json ) {	
+	  	console.log("LoadMainPageData LOaded");	
 			if(json.page404 == undefined ){	
 				
 				main_page_load = true;	
@@ -632,9 +633,10 @@ function LoadMainPageData(){
 	  }, 
 	  timeout: 8000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
-		 if(status == "timeout"){
-			ShowMessage(1);
-		 } 
+	  	console.log("error - "+status);	
+		 
+		ShowMessage(1);
+		 
 	  } 
 	});
 	}else{
@@ -1005,9 +1007,9 @@ function ShowFilter(link,back){
 	  }, 
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
-		 if(status == "timeout"){
+		
 			ShowMessage(1);
-		 } 
+		
 	  } 
 	});		 
 }
@@ -1053,9 +1055,9 @@ function ShowFilterEnums(id,name){
 	  }, 
 	  timeout: 5000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
-		 if(status == "timeout"){
+		
 			ShowMessage(1);
-		 } 
+		 
 	  } 
 	});		 
 }
