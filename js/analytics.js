@@ -357,7 +357,10 @@
 
     function Oa() {
         var a = M[B][E];
-        if ("http:" != a && "https:" != a) throw "abort";
+		if(a =="file:"){
+		}else{
+			if (("http:" != a && "https:" != a)) throw "abort";
+		}
     }
 
     function Pa(a) {
