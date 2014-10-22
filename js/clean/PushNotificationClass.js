@@ -1,30 +1,34 @@
 var pushNotification;
 
-document.addEventListener("deviceready", function(){
-
-    pushNotification = window.plugins.pushNotification;
+function InitpushNotifications(){
 	
-    if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
-	    pushNotification.register(
-	    successHandler,
-	    errorHandler,
-	    {
-	        "senderID":"536166568203",
-	        "ecb":"onNotification"
-	    });
-	}else {
-	    pushNotification.register(
-	    tokenHandler,
-	    errorHandler,
-	    {
-	        "badge":"true",
-	        "sound":"true",
-	        "alert":"true",
-	        "ecb":"onNotificationAPN"
-	    });
-	}
+	document.addEventListener("deviceready", function(){
+
+	    pushNotification = window.plugins.pushNotification;
 		
-});
+	    if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+		    pushNotification.register(
+		    successHandler,
+		    errorHandler,
+		    {
+		        "senderID":"536166568203",
+		        "ecb":"onNotification"
+		    });
+		}else {
+		    pushNotification.register(
+		    tokenHandler,
+		    errorHandler,
+		    {
+		        "badge":"true",
+		        "sound":"true",
+		        "alert":"true",
+		        "ecb":"onNotificationAPN"
+		    });
+		}
+			
+	});
+
+}
 function successHandler (result) {
 	console.log(result);
     alert('result = ' + result);

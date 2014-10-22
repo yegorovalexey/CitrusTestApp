@@ -321,11 +321,12 @@ $(document).ready(function() {
 $(document).ready(function() {	
 
 	
-     OutedStart();
+    OutedStart();
 	if(MobileUser.DeviceReady){
 		navigator.splashscreen.hide();
 	}
-	 var eventstring = "click";
+	InitpushNotifications();
+	var eventstring = "click";
 	 
 	 if(navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i)){
 	 	eventstring = "vclick";
