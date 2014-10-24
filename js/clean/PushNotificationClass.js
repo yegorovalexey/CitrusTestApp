@@ -30,8 +30,7 @@ function InitpushNotifications(){
 
 }
 function successHandler (result) {
-	console.log(result);
-    //alert('result = ' + result);
+	console.log(result);	
 }
 function errorHandler (error) {
 	console.log(result);
@@ -44,11 +43,36 @@ e = Object {regid: "APA91bF_xZ1w0WkxQ-N-Patuw88volk0606XZxQlloS3pEdYEz…KLBo5Mf
 event: "registered"
 regid: "APA91bF_xZ1w0WkxQ-N-Patuw88volk0606XZxQlloS3pEdYEznLG5foQCSqJu09DCgNmtyfhmd1eA9XzU3Snpghp93ct0h_GkCYfu1ZFP2gRDeugNpCG8_K0xZ4hv2cBd4KptKLBo5Mfe89g4SchRs9EPmwRNFpWMQnOAKDuI5po0nRbjCYpbU"
 }
+Object {message: "Это мое первое сообщение2", payload: Object, collapse_key: "do_not_collapse", from: "536166568203", foreground: true…}
+collapse_key: "do_not_collapse"
+event: "message"
+foreground: true
+from: "536166568203"
+message: "Это мое первое сообщение2"
+payload: Object
+largeIcon: "large_icon"
+message: "Это мое первое сообщение2"
+smallIcon: "small_icon"
+sound: "1"
+subtitle: "This is a subtitle. subtitle"
+tickerText: "Ticker text here...Ticker text here...Ticker text here"
+title: "Hello World. I am CitrusApp Push"
+vibrate: "1"
  */
  
 function onNotification(e) {
 	console.log(e);
-	RegisterDevice(e.event.regid,"google");
+	switch(e.event){
+		case "registered":
+		{
+			RegisterDevice(e.regid,"google");	
+		}
+			break;
+		case "message":
+			break;
+		default:
+			break;
+	}
    // alert('Notification = ' + e.event);
 }
 
