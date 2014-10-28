@@ -6,6 +6,7 @@ function InitpushNotifications(){
 
 	    pushNotification = window.plugins.pushNotification;
 		
+		console.log(device);
 	    if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 		    pushNotification.register(
 		    successHandler,
