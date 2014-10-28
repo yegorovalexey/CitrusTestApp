@@ -59,7 +59,7 @@ $( document ).on( "pageinit", "#search-page", function() {
 });
 
 
-// Эвент создания страницы описка Jquery Mobile
+// Эвент создания страницы Cписка Jquery Mobile
 //setup before functions
 var typingTimer;                //timer identifier
 var doneTypingInterval = 1000;  //time in ms, 5 second for example

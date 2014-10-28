@@ -106,7 +106,7 @@ function RegisterDevice(key,provider){
 function JQueryMobileHandlePushRequest(event,id){
 	switch(event){
 		case "product":{
-			$.mobile.changePage("#product-card?product-id="+id);
+			$.mobile.changePage("#product-card?product-id="+id,{changeHash:true});
 		} 
 		break;
 		case "link":{			
