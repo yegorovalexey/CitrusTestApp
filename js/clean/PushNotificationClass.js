@@ -86,7 +86,7 @@ function AfterRegisterDevice(data){
     console.log(data);
 }
 
-function RegisterDevice(key,provider,){
+function RegisterDevice(key,provider){
     var phone = "";
     var php_path = "device.php";
     var data = 'register&key='+key+'&mobile='+phone+'&provider='+provider+'&model='+device.model+'&version='+device.platform+" "+device.version;
