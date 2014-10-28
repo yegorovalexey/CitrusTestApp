@@ -1,5 +1,5 @@
 var pushNotification;
-
+var PushInitParams = false;
 function InitpushNotifications(){
 	
 	document.addEventListener("deviceready", function(){
@@ -35,32 +35,11 @@ function successHandler (result) {
 }
 function errorHandler (error) {
 	console.log(result);
-   // alert('error = ' + error);
+   
 }
 
 // handle GCM notifications for Android
-/*
-e = Object {regid: "APA91bF_xZ1w0WkxQ-N-Patuw88volk0606XZxQlloS3pEdYEz…KLBo5Mfe89g4SchRs9EPmwRNFpWMQnOAKDuI5po0nRbjCYpbU", event: "registered"}
-event: "registered"
-regid: "APA91bF_xZ1w0WkxQ-N-Patuw88volk0606XZxQlloS3pEdYEznLG5foQCSqJu09DCgNmtyfhmd1eA9XzU3Snpghp93ct0h_GkCYfu1ZFP2gRDeugNpCG8_K0xZ4hv2cBd4KptKLBo5Mfe89g4SchRs9EPmwRNFpWMQnOAKDuI5po0nRbjCYpbU"
-}
-Object {message: "Это мое первое сообщение2", payload: Object, collapse_key: "do_not_collapse", from: "536166568203", foreground: true…}
-collapse_key: "do_not_collapse"
-event: "message"
-foreground: true
-from: "536166568203"
-message: "Это мое первое сообщение2"
-payload: Object
-largeIcon: "large_icon"
-message: "Это мое первое сообщение2"
-smallIcon: "small_icon"
-sound: "1"
-subtitle: "This is a subtitle. subtitle"
-tickerText: "Ticker text here...Ticker text here...Ticker text here"
-title: "Hello World. I am CitrusApp Push"
-vibrate: "1"
- */
- 
+
 function onNotification(e) {
 	console.log(e);
 	switch(e.event){
@@ -70,7 +49,19 @@ function onNotification(e) {
 		}
 			break;
 		case "message":
+		{
+			if(e.payload != undefined && e.payload.citrus_event != undefined && e.payload.citrus_id != undefined ){
+				if(MobileUser!=undefined && MobileUser.CitrusMobileReady != undefined && MobileUser.CitrusMobileReady ==true){
+					JQueryMobileHandlePushRequest(e.payload.citrus_event,e.payload.citrus_id);
+				}else{
+					PushInitParams  = new Array();
+					PushInitParams["event"] = e.payload.citrus_event;
+					PushInitParams["id"] = e.payload.citrus_id;
+				}
+			}
+		}
 			break;
+			
 		default:
 			break;
 	}
@@ -110,4 +101,21 @@ function RegisterDevice(key,provider){
         }
     });
 
+}
+
+function JQueryMobileHandlePushRequest(event,id){
+	switch(event){
+		case "product":{
+			$.mobile.changePage("#product-card?product-id="+id);
+		} 
+		break;
+		case "link":{			
+			$.mobile.changePage("#products-list?category-items="+id);
+		} 
+		break;
+		case "text":{
+			$.mobile.changePage("#text-page?id="+id);
+		} 
+		break;
+	}
 }
