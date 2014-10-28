@@ -74,31 +74,22 @@ function onNotification(e) {
 		default:
 			break;
 	}
-   // alert('Notification = ' + e.event);
 }
 
 // handle APNS notifications for iOS
-
 function onNotificationAPN(e) {
 	console.log(e);
-   // alert('Notification = ' + e.alert);
 }
 
 
 function AfterRegisterDevice(data){
     console.log(data);
-  //  alert(data);
 }
 
-function RegisterDevice(key,provider,mobile){
+function RegisterDevice(key,provider,){
     var phone = "";
-    if(arguments.length==3 && mobile!= undefined){
-        phone = mobile;
-    }
     var php_path = "device.php";
-    var data = 'register&key='+key+'&mobile='+phone+'&provider='+provider;
-
-
+    var data = 'register&key='+key+'&mobile='+phone+'&provider='+provider+'&model='+device.model+'&version='+device.platform+" "+device.version;
 
     $.ajax({
         url: "http://m.citrus.ua/ajax/on/"+php_path+"?method="+data,
