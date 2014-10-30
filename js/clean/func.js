@@ -1178,7 +1178,7 @@ function InitShopList(){
 	ShowLoading();
 	 
 	$.ajax({ 
-	  url: "res/shoplist.json", 
+	  url: "json/shoplist.json", 
 	  dataType: 'json', 
 	  success: function( json ) {
 			 var output = "";
