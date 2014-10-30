@@ -38,6 +38,7 @@
 	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
 	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+             <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
