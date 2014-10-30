@@ -1178,7 +1178,7 @@ function InitShopList(){
 	ShowLoading();
 	 
 	$.ajax({ 
-	  url: "http://m.citrus.ua/ajax/on/shoplist.php", 
+	  url: "res/shoplist.json", 
 	  dataType: 'json', 
 	  success: function( json ) {
 			 var output = "";
