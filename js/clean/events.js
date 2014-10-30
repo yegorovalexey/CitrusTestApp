@@ -12,7 +12,7 @@
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'js/analytics.js', 'ga');
 	
-	ga('create', 'UA-2170097-20', 'auto', {'allowLinker': true});
+	ga('create', 'UA-2170097-21', 'auto', {'allowLinker': true});
 	ga('require', 'linker');
 	ga('linker:autoLink', ['citrus.ua'] );
 
@@ -134,6 +134,12 @@ $( document ).on( "pageshow", "#online-page", function() {
 	$.getScript("/js/online.js").done(function() {
 		onlineLoadScript();
 	});
+});
+
+$( document ).on( "pageshow", "#shoplist-page", function() {
+	
+	InitShopList();
+		
 });
 
 var owlcarouselproductcard = undefined;

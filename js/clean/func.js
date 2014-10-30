@@ -1172,3 +1172,52 @@ function Enums(){
 }
 
 var FilterEnums = new Enums();
+
+function InitShopList(){	
+	
+	ShowLoading();
+	 
+	$.ajax({ 
+	  url: "http://m.citrus.ua/ajax/on/shoplist.php", 
+	  dataType: 'json', 
+	  success: function( json ) {
+			 var output = "";
+			 var count = 0;
+			
+			 if(json.items !== undefined )
+			 $.each( json.items, function( key, value ) {
+			 	var url ;			
+				
+				var image = "";
+				if(value.image != undefined){
+					image = '<img src="' + value.image + '" >';
+				}
+				if(value.PROPERTY_CITY_PHONE_VALUE == undefined || value.PROPERTY_CITY_PHONE_VALUE ==""){
+					value.PROPERTY_CITY_PHONE_VALUE = "0 800 501-522"
+				}
+				output += '<li><a o data-transition="slide" data-ajax=false   "> <table style="width:100%"><tr><td style="vertical-align: middle;text-align:center;width:64px" class="first">'+
+				''+image+'</td><td style="vertical-align:middle;text-align:left;padding-left:1.1rem;"> '
+				+'<h2 class="item_name_only product">' 
+				+ value.city +", "+value.NAME + '</h2>	<div class="preview_text">' 
+				+'Телефон: '+ value.PROPERTY_CITY_PHONE_VALUE +"</br>Время работы: "+value.PROPERTY_CITY_WORK_TIME_VALUE+ '</div></td> '+
+				'</tr></table></a></li>';
+				// nclick="Showtextpage('+value.id+')"
+			 });	
+			
+				  
+			$('#shoplist-listview').html(output).listview("refresh");
+				
+			
+			 $.mobile.loading( "hide" );
+			 ProssedTapEvents();			 
+
+		 }, 
+	  timeout: 5000 ,
+	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
+		 if(status == "timeout"){
+		 	ShowMessage(1);
+			 $.mobile.loading( "hide" );
+		 }
+	  } 
+	});
+}
