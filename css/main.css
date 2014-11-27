@@ -1,12 +1,12 @@
 html,body{
 	/*font-family: ubuntu;*/
-	font-family:robotoregular ;
+	font-family:robotoregular,"Helvetica Neue", Helvetica, Arial, sans-serif ;
 }
 html * {
-	font-family:robotoregular ;
+	font-family:robotoregular,"Helvetica Neue", Helvetica, Arial, sans-serif ;
 }
 input, select, textarea, button,a {
-	font-family:robotoregular !important; 
+	font-family:robotoregular,"Helvetica Neue", Helvetica, Arial, sans-serif !important; 
 	font-weight: normal !important; 
 }
 
@@ -88,7 +88,7 @@ text-shadow: inherit !important;
 padding:0;
 background-color:transparent !important;
 border:0;
-margin-top: 8px !important;
+margin-top: 8px;
 margin-bottom: 0px;
 }
 .c_menu_btn{
@@ -240,7 +240,16 @@ h1,h2,h3{
 right: 10px;
 }
 .ui-btn-left{
-left: 10px;
+	left: 0;
+	height: 42px;
+	width: 42px;
+	top: 0;
+	padding-top: 8px !important;
+	margin-top: 0px !important;
+	overflow: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .ui-header{
 	padding: 0.2rem 0;
@@ -299,7 +308,7 @@ vertical-align: middle;
 .green_btn{
 
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#95cd60', endColorstr='#6da538',GradientType=0);
-background-color: #46CA5E !important;
+background-color: #62b815 !important;
 -moz-border-radius: 3px  !important;
 -webkit-border-radius: 3px  !important;
 border-radius: 3px  !important;
@@ -309,7 +318,7 @@ font-weight: 400;
 font-size: 1.3rem;
 padding: 0.5rem 0;
 
-text-shadow: 1px 1px 2px #8ADD99 !important;
+
 }
 .tel_btn{
 
@@ -465,7 +474,7 @@ font-size: 0.9rem;
 
 }
 #product-card-prices {
-margin-top: 0.7rem;
+margin-top: 0rem;
 }
 .prices_item_cr {
 overflow: hidden;
@@ -524,10 +533,10 @@ background: #F47317;
 	
 }
 .citrus_club {
-text-align: center;
-
-background-color: #FEF8BC;
-padding: 0.5rem 0;
+text-align: left;
+padding: 0rem 0;
+color: #777777;
+font-size: 0.8rem;
 }
 .citrus_club a {
 color: #63912E;
@@ -812,7 +821,7 @@ top: 3px;
 .leftsideh1 a{
 	color: #FFFFFF !important;
 }
-.btn_tabs .ui-btn { 
+.btn_tabs .ui-btn {
 float: left;
 width: 50%;
 margin: 0px
@@ -856,7 +865,22 @@ font-size: 1rem;
 	margin-top:10px;
 	cursor:pointer;
 }
+
 #product-card-content {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+.ui-panel .ui-icon-carat-r:after{
+	display: none;
+}
+.ui-panel .ui-btn{
+-webkit-border-radius: .3125em;
+border-radius: .3125em;
+}
+#product-card-content .product-card-module-cr.first.module-open .main-module {
+border-bottom: 1px solid #C8C7CC;
+}
+#product-card-content .product-card-module-cr.first.module-open {
+border-bottom: 1px solid #C8C7CC;
 }

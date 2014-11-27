@@ -1273,3 +1273,8 @@ function InitShopList(){
 	  } 
 	});
 }
+function getAndroidVersion(ua) {
+    var ua = ua || navigator.userAgent; 
+    var match = ua.match(/Android\s([0-9\.]*)/);
+    return match ? match[1] : false;
+};
