@@ -24,6 +24,7 @@
 
 
 <link	rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" />
+<link	rel="stylesheet" href="css/buttons/flat.css" />
 <link	rel="stylesheet" href="css/main.css" />
 <link	rel="stylesheet" href="css/owl.carousel.css" />
 
@@ -32,13 +33,8 @@
 <script src="js/clean/PushNotificationClass.js"></script>
 <script src="jquery/jquery.js"></script>
 <script src="jquery/jquery.mobile-1.4.2.js"></script>
-<!--<script src="jquery/jquery.touchSwipe.min.js"></script>-->
 <script src="jquery/owl.carousel.min.js"></script>
 
-<!--<script src="jquery/jquery.lazyloadxt.js"></script>-->
-
-
-<!--<script src="jquery/jquery.mobile.lazyloader.min.js"></script>-->
 
 <script src="js/clean/lazylist.js"></script>
 <script src="js/clean/func.js"></script>
@@ -49,15 +45,9 @@
 <script src="js/clean/actions.js"></script>
 <script src="js/clean/events.js"></script>
 
-<!--<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js">
-	{
-    startOpened: true,
-    enableTrace: true
-	}
-</script>-->
 
 </head>
-<body class="ui-mobile-viewport ui-overlay-a" id="ui-page-top">
+<body class="ui-mobile-viewport ui-overlay-a flat" id="ui-page-top">
 
 <!-- Главная страница Начало -->
 <div data-role="page" id="main" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
@@ -158,10 +148,10 @@
 			</div>		
             <div style="text-align: center;padding:16px">
 				<h2>Служба поддержки клиентов</h2>
-				<a href="tel:0800501522" class="btn ui-link"><button id="product-card-tel-btn" class="tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
+				<a href="tel:0800501522" class="ui-link"><button id="product-card-tel-btn" class="btn big tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
 			</div>	
 						
-		</div>	
+		</div>	 
 		
 				<div class="copy_links copy">		
 					<a href="http://www.citrus.ua/?dmode=1">Полная версия</a>	
@@ -320,29 +310,39 @@
 			
 			<div id="product-card-variations"></div>	
 			  
-			<hr>
+			
 			<div class="content-padding">	
 			<div id="product-card-prices"></div>
 			<div id="product-card-status"></div>
-			
-			
-	            <button  id="product-card-buy-btn" class="ui-btn ui-corner-all green_btn" style="display:none"><i class="c_icon c_basket_simple c_ibtn"></i>	 Купить</button>
-				<button  id="product-card-pre-btn" class="ui-btn ui-corner-all green_btn" style="display:none" onclick="OpenPreorderPage()">	 Заказать</button>
 
 				<div id="citrus_club" class="citrus_club"></div>
+			
+	            <button  id="product-card-buy-btn" class="ui-btn ui-corner-all btn big green_btn" style="display:none"><i class="c_icon c_basket_simple c_ibtn"></i>	 Купить</button>
+				<button  id="product-card-pre-btn" class="ui-btn ui-corner-all btn big green_btn" style="display:none" onclick="OpenPreorderPage()">	 Заказать</button>
+
+				
 				
 				<div id="product-card-delivery">
-					<img src="http://www.citrus.ua/images/pic7/free-delivery-slider.jpg" title="Бесплатная доставка! Оплата при получении!" border="0" style="
-    max-width: 100%;
-    margin: 2rem 0;
-">
+					
 				</div>
 			</div>	
 
 			
+
+			<div class="product-card-module-cr first   module-close">
+				<div id="product-card-info" class="product-card-module main-module module" onclick="moduletoggle(this);">Бесплатная доставка</div>
+				<div class="product-card-info-content">
+					<ul>
+						<li>в ближайший магазин Цитрус</li>
+						<li>курьером домой или в офис</li>
+						<li>в отеделение «Новой почты» без оплаты «за наложку»!</li>
+
+					</ul>
+                </div>
+			</div>
 			
 
-			<div class="product-card-module-cr first">
+			<div class="product-card-module-cr ">
 				<a data-transition="slide" id="product-card-props-link"  data-ajax=false><div id="product-card-info" class="product-card-module main-module module link">Характеристики</div></a>
 			</div>
 			 <div class="product-card-module-cr ">
@@ -360,13 +360,12 @@
 				
 		  <div style="text-align: center;" class="content-padding">
 				<h2>Служба поддержки клиентов</h2>
-				<a href="tel:0800501522" class="btn ui-link"><button id="product-card-tel-btn" class="tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
+				<a href="tel:0800501522" class="ui-link"><button id="product-card-tel-btn" class="btn big tel_btn ui-btn ui-corner-all"><i class="c_icon c_phone c_ibtn"></i>0 (800) 501-522 </button></a>
 			</div>	
 						
 		</div>	
 		<hr>
-			<div class="copy_links copy">			
-				<a href="#" id="card_dmode_link" rel="external">Полная версия</a>
+			<div class="copy_links copy">		
 				<a onclick="Showtextpage(133572)">Доставка и оплата</a>
 				<a onclick="Showtextpage(133564)">Гарантия</a>
 			</div>	
@@ -398,7 +397,7 @@
 			<div class="content-padding">
 	            <h2 style="float: left;">Моя корзина</h2>
 				<div class="total_price" id="total_price"></div>
-	            <button class="ui-btn ui-corner-all green_btn" id="order-make-btn" onclick="MakeOrder()">Оформить заказ</button>
+	            <button class="ui-btn ui-corner-all  btn big green_btn" id="order-make-btn" onclick="MakeOrder()">Оформить заказ</button>
 				<div id="cart-status"></div>				
 			</div>
 			
@@ -448,7 +447,7 @@
 				
 				<div><input type="text" placeholder="Email" id="order_email"   autocomplete="on" ></div>
 				
-				 <button class="ui-btn ui-corner-all green_btn" id="order-make-btn" onclick="StartMakeOrderTry();">Заказать</button>
+				 <button class="ui-btn ui-corner-all  btn big green_btn" id="order-make-btn" onclick="StartMakeOrderTry();">Заказать</button>
 			</div>
 			<hr>
 			<div class="copy_links copy">			
@@ -482,7 +481,7 @@
 					<h2>Спасибо!</h2>
 					<div style="margin-bottom: 1rem;">Ваш заказ № B-<span id="order_done_page_order_id"></span> принят.</div>					
 					<div style="margin-bottom: 1rem;">Для уточнения наличия товара пожалуйста дождитесь звонка от менеджера call-центра.</div>	
-					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="green_btn ui-btn ui-corner-all">Продолжить покупки</button></a>		
+					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="  btn big green_btn ui-btn ui-corner-all">Продолжить покупки</button></a>		
 				</div>
 				<hr>
 				<div class="copy_links copy">			
@@ -539,7 +538,7 @@
 				<div><input type="text" placeholder="Комментарий" id="preorder_comment"   autocomplete="on"></div>
 				
 				
-				 <button class="ui-btn ui-corner-all green_btn" id="preorder-make-btn" onclick="StartMakePreOrderTry();">Заказать</button>
+				 <button class="ui-btn ui-corner-all  btn big green_btn" id="preorder-make-btn" onclick="StartMakePreOrderTry();">Заказать</button>
 			</div>
 			<hr>
 			<div class="copy_links copy">			
@@ -562,7 +561,7 @@
 		<a data-iconpos="notext" link="#nav-panel-preorder-done-page" class="ui-noshadow cit_panel_href" >			
 		<i class="c_icon c_menu"></i>			
 		</a>
-		<h1><div class="fa_custom_logo"></div></h1>
+		<h1><div class="c_main_logo"></div></h1>
 		
 		</a>	
 	</div>		
@@ -572,7 +571,7 @@
 				<div class="content-padding">
 					<h2>Спасибо!</h2>
 					<div style="margin-bottom: 1rem;">Ваш предзаказ № <span id="order_done_page_preorder_id"></span> получен и отправлен в обработку! Мы свяжемся с Вами, как только товар появится в наличии.</div>	
-					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="green_btn ui-btn ui-corner-all">Продолжить покупки</button></a>		
+					<a href="#main" class="btn ui-link"><button id="product-card-tel-btn" class="  btn big green_btn ui-btn ui-corner-all">Продолжить покупки</button></a>		
 				</div>
 				<hr>
 				<div class="copy_links copy">			
@@ -654,7 +653,7 @@
 			<div class="screen-center">
 				<h3>Ваш номер мобильного телефона</h2>
 				<div class="phone_add"><input type="tel"  id="phone" maxlength="13" autocomplete="off"  value="+380" onkeyup="MobileUser.VerifyPhoneInput(this,'#sendCodeButton')"></div>
-				<button id="sendCodeButton" class="ui-btn ui-corner-all green_btn" onclick="MobileUser.Authorization_sendCode($('#phone').val());">Далее</button>
+				<button id="sendCodeButton" class="ui-btn ui-corner-all  btn big green_btn" onclick="MobileUser.Authorization_sendCode($('#phone').val());">Далее</button>
 			</div>	
 		</div>		
 </div>
@@ -675,7 +674,7 @@
 				
 				<h3>Введите код из СМС</h2>
 				<div><input type="tel" placeholder="" id="sms_code"  maxlength="4" autocomplete="off" ></div>
-				<button id="sms-code-btn" class="ui-btn ui-corner-all green_btn"  onclick="MobileUser.AuthorizeByCode($(this).attr('phone'),$('#sms_code').val());">Войти</button>
+				<button id="sms-code-btn" class="ui-btn ui-corner-all  btn big green_btn"  onclick="MobileUser.AuthorizeByCode($(this).attr('phone'),$('#sms_code').val());">Войти</button>
 				
 		</div>		
 </div>
@@ -836,6 +835,14 @@
 	</div>
 </div>
 <!-- / Онлайн консультанта Конец-->
+
+<!-- Страница router Начало -->
+<div data-role="page" id="loader" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">			
+		<div data-role="content" >
+				
+		</div>				
+</div>
+<!-- / Страница router Конец-->
 
 
 <div data-role="dialog" id="timeout">Ошибка. Проверьте соединение с интернет ...</div>

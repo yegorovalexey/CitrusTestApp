@@ -23,6 +23,55 @@ if(supportsSVG()){
 }else{
 	loadjscssfile("css/icons-png.css","css");
 }
+function changePage (page) {
+    $.mobile.changePage(page, {
+        transition: "none",
+        changeHash: false
+    });
+}
+var loaded_pages = new Array();
+function include_page(page_name){
+
+	if($("#"+page_name).length == 0 ){	
+	  loadjscssfile("/pages/"+page_name+"/style.css?","css");
+	 // loadjscssfile("/pages/"+page_name+"/script.js?","js");
+	  $( document ).on( "pageinit", "#"+page_name, function() {
+	  		//console.log("init - #"+page_name);
+	  	  	$( ".navPanelChild.menu_to_clone" ).each(function(key,value) {
+			  var navpanelCopy = $( "#nav-panel" ).html();
+		  	  $(value).html(navpanelCopy).trigger( "updatelayout" );	
+		  	  $(value).find('[data-role="listview"]').listview();	   
+			});
+
+	  	 $('#'+page_name+' .cit_panel_href').on(eventstring,function(event){
+					event.stopPropagation();
+					event.preventDefault();
+					
+					$($(this).attr('link') ).panel( "open" );					
+		  });	
+	  	  loadjscssfile("/pages/"+page_name+"/script.js?","js");
+		  changePage("#"+page_name);		 
+	  });
+	  $.get( "/pages/"+page_name+"/index.html?", function( data ) {
+		 loaded_pages[page_name] = data;
+		 $("body").append(data);
+		 $("#"+page_name).page();
+	  });
+	  //$( ":mobile-pagecontainer" ).pagecontainer( "load", "/pages/"+page_name+"/index.html?" );
+	  
+	 }else{
+	 	changePage("#"+page_name);		 
+	 } 
+
+		
+}
+
+function goBack(){
+	var previousPage =$.mobile.activePage.data('ui.prevPage');
+	if(typeof previousPage.prevObject[0]!='undefined'){
+	$.mobile.changePage(previousPage.prevObject[0].id, 'slide', true, true);
+	}
+}
 
 // Инициализация свайпа навигационного меню
 function  SwipeInit(){
@@ -139,7 +188,12 @@ function LoadDefaultCatalog(category,position){
 						prop = value.props;
 					}
 					
-					output += '<li class="'+lazy+'"><a data-transition="slide" data-ajax=false class="vclick_d_link"  link="'+url+'"> 					<table style="width:100%"> 						<tr> 							<td style="vertical-align: middle;text-align:center;width:64px" class="first"> 								<img src="' + value.image + '" >							 							</td> 							<td style="vertical-align:middle;text-align:left;padding-left:1.1rem;"> 								<h2 class="item_name_only '+dop_class+'">' + value.name + '</h2>'+row2+'<div class="props">'+prop+'</div> 							</td> 							<td style="width:25px"> 							</td> 						</tr> 					</table> 					 				</a></li>';
+					var bonuses = "";
+					if(value.bonuses != undefined && parseInt(value.bonuses) > 5){
+						bonuses = '<div class="props">+'+parseInt(value.bonuses)+' грн на бонусный счет</div>';
+					}
+
+					output += '<li class="'+lazy+'"><a data-transition="slide" data-ajax=false class="vclick_d_link"  link="'+url+'"> 					<table style="width:100%"> 						<tr> 							<td style="vertical-align: middle;text-align:center;width:64px" class="first"> 								<img src="' + value.image + '" >							 							</td> 							<td style="vertical-align:middle;text-align:left;padding-left:1.1rem;"> 								<h2 class="item_name_only '+dop_class+'">' + value.name + '</h2><div class="props">'+prop+'</div>'+row2+bonuses+' 							</td> 							<td style="width:25px"> 							</td> 						</tr> 					</table> 					 				</a></li>';
 					
 					
 									
@@ -185,7 +239,7 @@ function LoadDefaultCatalog(category,position){
 			
 			product_list_page_loded = true;
 			ShowMessage(1);
-			//location.reload();
+			
 		
 	  } 
 	});
@@ -321,11 +375,10 @@ function loadProductCard(id,owl){
 				$('#product-card').attr("chars_load","N");
 				$('#product-card').attr("product_id",parseInt(id));
 				$('#card_dmode_link').attr("href","http://m.citrus.ua/go.php?id="+id);
-				
+				 
 				if(json.bonuses!= undefined && parseInt(json.bonuses.summ) > 2 ){
 					$('#citrus_club').html(
-						"<div><a>Цитрус Клуб</a> - купи и получи:</div>"+
-						"<span class='bonus'>+<span class='numm'>"+json.bonuses.summ+"</span> бонусных грн*</span>"
+						"<div>Возвращаем <b>"+json.bonuses.summ+" грн</b> на бонусный счет</div>"
 					);
 					$('#citrus_club').show();
 				}else{
@@ -571,13 +624,12 @@ var main_images  = false;
 function LoadMainPageData(){
 	if(!main_page_load){
 		
-	console.log("LoadMainPageData");	
+	
 	$.ajax({ 
 	  url: "http://m.citrus.ua/ajax/main.php", 
 	  dataType: 'json',
 	  async: true, 
 	  success: function( json ) {	
-	  	console.log("LoadMainPageData LOaded");	
 			if(json.page404 == undefined ){	
 				
 				main_page_load = true;	
@@ -712,7 +764,7 @@ function DoLoadBasketItems(json){
 					else{
 						row2 = '<div class="status">'+value.can_buy_status+'</div>';;
 					}
-					cart_items += '<li id="basket_item_li_'+value.basket_id+'" class=""><a data-transition="slide" data-ajax=false class="vclick_d_link"  link="'+url+'"> 					<table style="width:100%"> 						<tr> 						<td class="delete_td"><img  item_id="'+value.basket_id+'"  class="delete_img" src="img/png/delete.png"></td>		<td style="vertical-align: middle;text-align:center;width:64px" class="first"> 								<img src="' + value.image + '" >							 							</td> 							<td style="vertical-align:middle;text-align:left;padding-left:1.1rem;"> 								<h2 id="basket_item_name_'+value.basket_id+'" class="item_name_only '+dop_class+'">' + value.name + '</h2>'+row2+' 							</td> 							<td style="width:25px" class="delete_td"> 		<div item_id="'+value.basket_id+'" class="select_basket__cnr mini_btn green">'+echoSelectBox(value.qnt)+'</div>					</td> 						</tr> 					</table> 					 				</a></li>';
+					cart_items += '<li id="basket_item_li_'+value.basket_id+'" class=""><a data-transition="slide" data-ajax=false class="vclick_d_link"  link="'+url+'"> 					<table style="width:100%"> 						<tr> 						<td class="delete_td"><img  item_id="'+value.basket_id+'"  class="delete_img" src="/img/png/delete.png"></td>		<td style="vertical-align: middle;text-align:center;width:64px" class="first"> 								<img src="' + value.image + '" >							 							</td> 							<td style="vertical-align:middle;text-align:left;padding-left:1.1rem;"> 								<h2 id="basket_item_name_'+value.basket_id+'" class="item_name_only '+dop_class+'">' + value.name + '</h2>'+row2+' 							</td> 							<td style="width:25px" class="delete_td"> 		<div item_id="'+value.basket_id+'" class="select_basket__cnr mini_btn green">'+echoSelectBox(value.qnt)+'</div>					</td> 						</tr> 					</table> 					 				</a></li>';
 		});
 		$("#cart-status").html("");
 		$('#cart-list').html(cart_items).listview("refresh");

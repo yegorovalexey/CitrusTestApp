@@ -142,6 +142,8 @@ $( document ).on( "pageshow", "#shoplist-page", function() {
 		
 });
 
+
+
 var owlcarouselproductcard = undefined;
 $( document ).on( "pageshow", "#product-card", function() {
 
@@ -167,11 +169,7 @@ $( document ).on( "pageshow", "#product-card", function() {
 				
 			}
 
-		  ReinitowlProductCard();
-			
-		   
-
-	
+		  ReinitowlProductCard();	
 });
  
 
@@ -230,7 +228,7 @@ $( document ).on( "pagebeforeshow", "#products-list", function(event, data) {
 	if(data.prevPage != undefined){
 		
 		var prev_id = data.prevPage.attr('id');
-		if(prev_id == "filter-page" || prev_id == "filter-values-page"){
+		if(prev_id == "filter-page" || prev_id == "filter-values-page" || prev_id == "product-card"){
 			
 		}else{
 			FilterEnums.Clear();
@@ -247,7 +245,7 @@ $(document).bind( "pagebeforechange", function( e, data ) {
 		{ 
 			if($.mobile.activePage != undefined){
 				var prev_id = $.mobile.activePage.attr('id');
-				if(prev_id == "filter-page" || prev_id == "filter-values-page"){
+				if(prev_id == "filter-page" || prev_id == "filter-values-page" || prev_id == "product-card"){
 					
 				}else{
 					FilterEnums.Clear();
@@ -314,9 +312,17 @@ $(document).ready(function() {
 			
 			  
 		  });
-		 
-		    
-		 // $('.ui-link').remove();
+		
+		var android = parseFloat(getAndroidVersion());
+		
+		 if(android > 0 && android <  4.2){
+		 	$("<style type='text/css'> "+
+
+'html,body{		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif ;}html * {	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif ;}input, select, textarea, button,a {	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif !important; }'+
+
+		 	" </style>").appendTo("head");
+		 }   
+		
 	
 	
 });
@@ -324,6 +330,7 @@ $(document).ready(function() {
 
 // инициализация события vclick
 //$( document ).on( "pageinit", function() {	
+	var eventstring;
 $(document).ready(function() {	
 
 	
@@ -382,8 +389,20 @@ $(document).ready(function() {
 
 
 
-$( document ).on( "pageshow", function() {	
-	$(".ui-panel-open").panel("close");
+$( document ).on( "pageshow", "#loader", function() {			
+			console.log("#loader show");
+			// Карточка товара
+			var page_to_load = "";
+			var u = $.mobile.path.parseUrl(  document.URL );
+			if(u.href.search("page=") !== -1)
+			{			
+				if( u.hash != undefined){					 
+					 var  page_to_load = u.hash.replace( /.*page=/, "" );					
+					 include_page(page_to_load);				
+				}
+				
+			}
+	
 });
 
 
