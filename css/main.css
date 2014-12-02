@@ -884,3 +884,6 @@ border-bottom: 1px solid #C8C7CC;
 #product-card-content .product-card-module-cr.first.module-open {
 border-bottom: 1px solid #C8C7CC;
 }
+.flat .btn.big{
+	padding:10px 20px;
+}
