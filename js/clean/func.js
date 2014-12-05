@@ -1282,3 +1282,12 @@ function getAndroidVersion(ua) {
 function SupportCall(){
     window.open('tel:0800501522', '_system', 'location=yes')
 }
+function CheckHrefChange(link){
+    var page = "#" + document.location.hash;
+    if(document.location.hash == ""){
+        page = "#main";
+    }
+    if(page == $(link).attr("href")) {
+        $(".ui-panel-open").panel("close");
+    }
+}
