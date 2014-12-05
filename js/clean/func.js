@@ -1283,7 +1283,7 @@ function SupportCall(){
     window.open('tel:0800501522', '_system', 'location=yes')
 }
 function CheckHrefChange(link){
-    var page = "#" + document.location.hash;
+    var page = document.location.hash;
     if(document.location.hash == ""){
         page = "#main";
     }
