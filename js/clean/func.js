@@ -1278,3 +1278,7 @@ function getAndroidVersion(ua) {
     var match = ua.match(/Android\s([0-9\.]*)/);
     return match ? match[1] : false;
 };
+
+function SupportCall(){
+    window.open('tel:0800501522', '_system', 'location=yes')
+}

@@ -121,7 +121,7 @@
     <access origin="http://m.citrus.ua/ajax/*" subdomains="true"/>
     <access origin="http://m.citrus.ua/ajax/on/*" subdomains="true"/>
 
-    <access origin="tel:*" launch-external="yes" />
+    <access origin="tel:0800501522" launch-external="yes" />
     <access origin="geo:*" launch-external="yes" />
    
 
