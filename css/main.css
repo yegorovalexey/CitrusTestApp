@@ -335,6 +335,11 @@ padding: 0.5rem 0;
 
 text-decoration: none;
 }
+
+.tel_btn a{
+color:#FFF;
+text-decoration:none;
+}
 /*.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 background-color: #F3F3F3;
 }*/
