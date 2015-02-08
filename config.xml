@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "ua.citrus.app.shop"
-        version   = "1.0.3">
+        version   = "1.0.3.1">
 
     <name>Цитрус</name>
 
@@ -40,7 +40,11 @@
 	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
 	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
-             <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<!--<preference name="StatusBarBackgroundColor" value="#000000" /> -->
 	
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
