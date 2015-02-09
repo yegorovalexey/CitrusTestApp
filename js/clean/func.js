@@ -168,6 +168,10 @@ function LoadDefaultCatalog(category,position){
 					}
 				}
 				
+ 				if(json.parameters!= undefined && json.parameters.parent_name != undefined &&  $("#CatalogBack").length > 0){
+                    $("#CatalogBack").html(json.parameters.parent_name);
+                }
+
 				var dop_class="";
 				if(value.price){
 					

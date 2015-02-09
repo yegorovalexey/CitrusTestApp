@@ -251,9 +251,11 @@ right: 10px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-.ui-header{
-	padding: 0.2rem 0;
-	min-height: 36px;
+.ui-header {
+    padding: 0.2rem 0px;
+    min-height: 36px;
+    box-sizing: border-box;
+    height: 44px;
 }
 .ui-content .ui-input-text{	
 	background-color: #fff;
@@ -891,4 +893,16 @@ border-bottom: 1px solid #C8C7CC;
 }
 .flat .btn.big{
 	padding:10px 20px;
+}
+
+.BackButton {
+    width: 300px;
+    text-align: left;
+    padding-left: 9px !important;
+}
+.BackButton span {
+    position: relative;
+    top: -3px;
+    font-size: 18px;
+    margin-left: 11px;
 }

@@ -39,7 +39,11 @@ margin-top: 6px;
 margin-right: 6px;
 }
 
-
+.c_back {
+    background-image: url(/img/png/white/ico-02_back.png);
+    position: relative;
+    top: 2px;
+}
 .c_basket {
 background-image: url(/img/png/white/ico-04.png);
 background-color: #F8934F;
