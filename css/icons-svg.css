@@ -31,7 +31,7 @@ float: left;
 background-image: url(../img/svg/white/ico-32.svg);
 }
 .c_back {
-    background-image: url(/img/svg/white/ico-02_back.svg);
+    background-image: url(../img/svg/white/ico-02_back.svg);
     position: relative;
     top: 2px;
 }
