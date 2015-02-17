@@ -284,7 +284,7 @@
 <!-- Карточка товара Начало -->
 <div data-role="page" id="product-card" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
     <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton"onclick="$.mobile.back();" >
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
             <i class="c_icon c_back" ></i>
         </a>
         <h1><div class="c_main_logo"></div></h1>
@@ -382,13 +382,18 @@
 
 <!-- Корзина товаров Начало -->
 <div data-role="page" id="page-cart" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-cart" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>					
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-			
-	</div>		
+	
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            
+        </div>
+    </div>
+
+    
  <div class="navPanelChild" id="nav-panel-cart"></div>
 		
 		<div data-role="content" >
@@ -411,13 +416,15 @@
 
 <!-- Оформление заказа Начало -->
 <div data-role="page" id="page-order" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-order" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-			
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-order"></div>
 		
 		<div data-role="content" id="page-order-content">
@@ -499,13 +506,15 @@
 
 <!-- Оформление предзаказа Начало -->
 <div data-role="page" id="page-preorder" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-preorder" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-			
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-preorder"></div>
 		
 		<div data-role="content" id="page-preorder-content">
@@ -587,17 +596,18 @@
 
 <!-- Страница поиска товаров Начало -->
 <div data-role="page" id="search-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-search-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>
-		</div>		
-	</div>		
+	 <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>
+    
  <div class="navPanelChild" id="nav-panel-search-page"></div>
 		
 		<div data-role="content">
@@ -617,16 +627,17 @@
 
 <!-- Страница детальный текст Начало -->
 <div data-role="page" id="text-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-text-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
-		<i class="c_icon c_basket"></i>			
-		</a>
-			
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>		
  <div class="navPanelChild" id="nav-panel-text-page"></div>
 		
 		<div data-role="content" class="content-padding" id="text-page-content">
@@ -637,14 +648,15 @@
 
 <!-- Страница Авторизации  Начало -->
 <div data-role="page" id="login-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-login-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		
-		</a>	
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+           
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-login-page"></div>
 		
 		<div data-role="content" class="content-padding" id="login-page-content">
@@ -658,14 +670,15 @@
 <!-- / Страница Авторизации текст Конец-->
 <!-- Страница ввода sms_code  Начало -->
 <div data-role="page" id="sms-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-sms-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		
-		</a>	
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+           
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-sms-page"></div>
 		
 		<div data-role="content" class="content-padding" id="sms-page-content">
@@ -681,17 +694,17 @@
 
 <!-- Страница новостей  Начало -->
 <div data-role="page" id="news-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-news-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>
-		</div>	
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-news-page"></div>
 		
 		<div data-role="content">		
@@ -703,17 +716,17 @@
 
 <!-- Страница акций  Начало -->
 <div data-role="page" id="actions-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-actions-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>	
-		</div>	
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-actions-page"></div>
 		
 		<div data-role="content">		
@@ -770,17 +783,17 @@
 
 <!-- Страница магазинов  Начало -->
 <div data-role="page" id="maps-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-maps-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="c_menu_btn ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>
-		</div>	
-	</div>	
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>
 <div class="navPanelChild" id="nav-panel-maps-page"></div>
 	<div data-role="content">		
 		<div id="map_canvas" style="width:100%; height:500px"></div>
@@ -794,17 +807,17 @@
 
 <!-- Страница список магазинов  Начало -->
 <div data-role="page" id="shoplist-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-shoplist-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>	
-		</div>	
-	</div>		
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>	
  <div class="navPanelChild" id="nav-panel-shoplist-page"></div>
 		
 		<div data-role="content">		
@@ -816,17 +829,17 @@
 
 <!-- Страница Онлайн консультанта  Начало -->
 <div data-role="page" id="online-page" class="app-page  ui-page ui-page-theme-a ui-page-footer-fixed">
-	<div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
-		<a data-iconpos="notext" link="#nav-panel-maps-page" class="ui-noshadow cit_panel_href c_icon_contr" >			
-		<i class="c_icon c_menu"></i>			
-		</a>
-		<h1><div class="c_main_logo"></div></h1>
-		<div class="bnt-menu-panel-right">
-			<a link="#page-cart"  data-role="button"   class="c_menu_btn ui-noshadow vclick_link c_icon_contr">			
-			<i class="c_icon c_basket"></i>			
-			</a>
-		</div>	
-	</div>	
+    <div data-role="header" data-position="fixed" id="header" class="jqm-header" data-tap-toggle="false" data-theme="b">
+        <a data-iconpos="notext"  class="ui-noshadow cit_panel_href c_icon_contr BackButton" onclick="$.mobile.back();" >
+            <i class="c_icon c_back" ></i>
+        </a>
+        <h1><div class="c_main_logo"></div></h1>
+        <div class="bnt-menu-panel-right">
+            <a link="#page-cart"  data-role="button"   class="ui-noshadow vclick_link c_icon_contr">
+                <i class="c_icon c_basket"></i>
+            </a>
+        </div>
+    </div>
 <div class="navPanelChild" id="nav-panel-maps-page"></div>
 	<div data-role="content">		
 		<div id="online_wrap"></div>
