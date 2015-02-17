@@ -30,6 +30,11 @@ float: left;
 .c_menu {
 background-image: url(/img/png/white/ico-32.png);
 }
+.c_back {
+    background-image: url(/img/png/white/ico-02_back.png);
+    position: relative;
+    top: 2px;
+}
 .c_user {
 background-image: url(/img/png/white/ico-18.png);
 width: 20px;
