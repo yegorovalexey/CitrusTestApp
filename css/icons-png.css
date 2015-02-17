@@ -187,6 +187,8 @@ background-repeat: no-repeat;
 width:108px;
 height: 20px;
 display: inline-block;
+    position: relative;
+    top: 3px;
 }
 
 .product-card-module:after, .ui-icon-carat-r:after{
