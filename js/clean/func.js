@@ -1282,6 +1282,11 @@ function getAndroidVersion(ua) {
     var match = ua.match(/Android\s([0-9\.]*)/);
     return match ? match[1] : false;
 };
+function isAndroid(ua) {
+    var ua = ua || navigator.userAgent;
+    var match = ua.match(/Android\s([0-9\.]*)/);
+    return match ? true : false;
+};
 
 function SupportCall(){
     window.open('tel:0800501522', '_system', 'location=yes')
@@ -1293,5 +1298,12 @@ function CheckHrefChange(link){
     }
     if(page == $(link).attr("href")) {
         $(".ui-panel-open").panel("close");
+    }
+}
+
+function go_back(){
+    if(!isAndroid()){
+        $.mobile.back();
+        return false;
     }
 }
