@@ -1307,3 +1307,10 @@ function go_back(){
         return false;
     }
 }
+
+
+function console_log(text){
+    if($('#console').length > 0){
+        $('#console').append("<div>" + text + "</div>");
+    }
+}
