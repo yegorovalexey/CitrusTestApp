@@ -1,32 +1,11 @@
-﻿// GoogleAnalytics
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'js/analytics.js', 'ga');
-	
-	ga('create', 'UA-2170097-21', 'auto', {'allowLinker': true});
-	ga('require', 'linker');
-	ga('linker:autoLink', ['citrus.ua'] );
-
-$(document).on('click', '.gas', function(){
-	var g=$(this), gac = g.attr('gac') || null , gaa = g.attr('gaa') || null, gam = g.attr('gam') || null;
-	ga('send', 'event', gac, gaa, gam);
-});
-
+﻿
 $(document).on('pageshow', '[data-role=page], [data-role=dialog]', function (event, ui) {
     try {
         if ($.mobile.activePage.attr("data-url")) {
-            ga('send', 'pageview', window.location.hash); // remove quotes
+            //ga('send', 'pageview', window.location.hash); // remove quotes
+            GA_track(window.location.hash);
         } else {
-            ga('send', 'pageview');
+            //ga('send', 'pageview');
         }
     } catch (err) {}
 });
