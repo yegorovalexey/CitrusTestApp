@@ -10,8 +10,8 @@ function InitGA(){
 
 function GA_track(page){
 
-    if(page = ""){
-        page = "Главная страница";
+    if(page == ""){
+        page = "Main page";
     }
 
     window.analytics.trackView(page);
