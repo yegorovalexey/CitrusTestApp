@@ -39,4 +39,4 @@ function GA_addTransactionItem(ID,Name,SKU,Category,Price,Quantity,Currency){
 }
 
 
-//InitGA();
+InitGA();
