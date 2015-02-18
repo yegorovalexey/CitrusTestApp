@@ -9,7 +9,13 @@ function InitGA(){
 }
 
 function GA_track(page){
-    window.analytics.trackView("page: " + page);
+
+    if(page = ""){
+        page = "Главная страница";
+    }
+
+    window.analytics.trackView(page);
+
     console_log("page: " + page);
 }
 
