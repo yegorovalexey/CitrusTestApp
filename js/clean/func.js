@@ -800,7 +800,7 @@ function AfterBuyProduct(json){
 }
 function StartBuyProduct(product_id){
     ShowLoading();
-	ga('send', 'event', 'OrderCreate', 'AddToCart', product_id, $('#current_product_price').val().replace(/[^\d,+]/g, ""));
+    GA_event('OrderCreate', 'AddToCart', product_id, $('#current_product_price').val().replace(/[^\d,+]/g, ""));
 	MobileUser.basket.addToCart(product_id,AfterBuyProduct);
 }
 function LoadCardInfo(info){
@@ -839,7 +839,8 @@ function LoadTextPage(id,data){
 }
 function MakeOrder(){
 	if(MobileUser.IsAuthorized){
-		ga('send', 'event', 'OrderCreate', 'MakeOrder');
+
+        GA_event('OrderCreate', 'MakeOrder');
 		$.mobile.changePage("#page-order",{changeHash:true});
 	}else{
 		MobileUser.LoginPromt();
@@ -880,7 +881,8 @@ function FillOrderPageFields(json){
 	$.mobile.loading( "hide" );
 }
 function StartMakeOrderTry(){
-	ga('send', 'event', 'OrderCreate', 'TryOrderCreate');
+
+    GA_event('OrderCreate', 'TryOrderCreate');
 	MobileUser.basket.Order($("#order_fio").val(),$("#order_email").val(),$("#order_city").val(),OnMakeOrderDone)
 }
 function OnMakeOrderDone(json){
@@ -888,33 +890,18 @@ function OnMakeOrderDone(json){
 	if(json.order_id != undefined){
 		// ORDER is DONE
 		
-		ga('require', 'ecommerce', 'ecommerce.js');
-		ga('ecommerce:addTransaction', {
-		  'id': json.order_id,
-		  'affiliation': 'Цитрус',
-		  'revenue': lastBasketTotal,
-		  'shipping': '',
-		  'tax': ''
-		});
+        GA_addTransaction(json.order_id,'Цитрус',lastBasketTotal,'','');
 
 		if(lastBasket != undefined && lastBasket.length > 0){
 			$.each( lastBasket, function( key, value ) {
-				ga('ecommerce:addItem', {
-				'id': json.order_id,
-				'name': value.name,       // Product name. Required
-				'sku': value.id,  // SKU/code
-				'category': '',   // Category or variation
-				'price': value.price,     // Unit price
-				'quantity': value.qnt// Quantity
-				});
+                GA_addTransactionItem(json.order_id,value.name,value.id,'',value.price,value.qnt);
 			});
 		}
 
-		ga('ecommerce:send');
-		
-		ga('send', 'event', 'OrderCreate', 'OrderDone', json.order_id);
-		ga('send', 'event', 'OrderCreatePhone', MobileUser.mobile_phone, json.order_id);
-		
+        GA_event('OrderCreate', 'OrderDone', json.order_id);
+        GA_event('OrderCreate', 'OrderCreatePhone', MobileUser.mobile_phone, json.order_id);
+
+
 		$('#order_done_page_order_id').html(json.order_id);		
 		$.mobile.changePage("#order-done-page",{changeHash:false});
 	}else{
@@ -924,16 +911,17 @@ function OnMakeOrderDone(json){
 }
 
 function OpenPreorderPage(){
-	ga('send', 'event', 'Preoder', 'preorder_step_1', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
+    GA_event( 'Preoder', 'preorder_step_1', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
 	$("#preorder_product_contaner").html("Вы оформляете предзаказ на товар: "+$("#product-card-name").html());
 	$.mobile.changePage("#page-preorder",{changeHash:true});
 }
 
 function StartMakePreOrderTry(){
 
-	ga('send', 'event', 'Preoder', 'preorder_step_2', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
+	GA_event('OrderCreate','Preoder', 'preorder_step_2', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
 
-	if($("#preorder_fio").val()!="" && $("#preorder_tel").val() !="" && $("#current_product_id").val()!="")
+
+    if($("#preorder_fio").val()!="" && $("#preorder_tel").val() !="" && $("#current_product_id").val()!="")
 	{	
 		MobileUser.basket.preOrder($("#preorder_fio").val(),$("#preorder_email").val(),$("#preorder_city").val(),$("#current_product_id").val(),$("#preorder_comment").val(),$("#preorder_tel").val(),OnMakePreOrderDone);
 	}else{
@@ -944,7 +932,7 @@ function OnMakePreOrderDone(json){
 	
 	if(json.preorder_id != undefined){
 		// ORDER is DONE
-		ga('send', 'event', 'Preoder', 'preorder_step_3', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
+        GA_event( 'Preoder', 'preorder_step_3', $('#product-card').attr("product_id"), $('#current_product_price').val().replace(/[^\d,+]/g, ""));
 		$('#order_done_page_preorder_id').html(json.preorder_id);		
 		$.mobile.changePage("#preorder-done-page",{changeHash:false});
 	}else{

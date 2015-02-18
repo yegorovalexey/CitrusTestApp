@@ -28,6 +28,15 @@ function GA_set_id(id){
     console_log("userID: " + id);
 }
 
+function GA_addTransaction(ID,Affiliation,Revenue,Tax,Shipping,Currency){
+    //window.analytics.addTransaction('ID', 'Affiliation', Revenue, Tax, Shipping, 'Currency Code');
+    window.analytics.addTransaction(ID, Affiliation, Revenue, Tax, Shipping, Currency);
+}
+
+function GA_addTransactionItem(ID,Name,SKU,Category,Price,Quantity,Currency){
+    //window.analytics.addTransactionItem('ID', 'Name', 'SKU', 'Category', Price, Quantity, 'Currency Code');
+    window.analytics.addTransactionItem(ID, Name, SKU, Category, Price, Quantity, Currency);
+}
 
 
 //InitGA();
