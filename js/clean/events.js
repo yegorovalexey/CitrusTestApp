@@ -338,8 +338,16 @@ $(document).ready(function() {
 					
 					$($(this).attr('link') ).panel( "open" );					
 			 	}
-	 );		
-	  $('.panel-menu-item').on("click",function(event)
+	 );
+    $('.BackButton').on(eventstring,function(event)
+        {
+            event.stopPropagation();
+            event.preventDefault();
+
+            $.mobile.back();
+        }
+    );
+    $('.panel-menu-item').on("click",function(event)
 		  {
 		 			event.stopPropagation();
 		  }
