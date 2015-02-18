@@ -1314,3 +1314,4 @@ function console_log(text){
         $('#console').append("<div>" + text + "</div>");
     }
 }
+

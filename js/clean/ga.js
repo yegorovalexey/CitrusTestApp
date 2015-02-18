@@ -30,4 +30,4 @@ function GA_set_id(id){
 
 
 
-InitGA();
+//InitGA();
