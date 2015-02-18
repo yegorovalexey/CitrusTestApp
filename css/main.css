@@ -906,3 +906,6 @@ border-bottom: 1px solid #C8C7CC;
     font-size: 18px;
     margin-left: 11px;
 }
+.BackButton:hover span {
+    color: rgb(231, 231, 231);
+}
