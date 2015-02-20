@@ -70,6 +70,29 @@ function onNotification(e) {
 // handle APNS notifications for iOS
 function onNotificationAPN(e) {
 	console.log(e);
+		switch(e.event){
+		case "registered":
+		{
+			RegisterDevice(e.regid,"apple");	
+		}
+			break;
+		case "message":
+		{
+			if(e.payload != undefined && e.payload.citrus_event != undefined && e.payload.citrus_id != undefined ){
+				if(MobileUser!=undefined && MobileUser.CitrusMobileReady != undefined && MobileUser.CitrusMobileReady ==true){
+					JQueryMobileHandlePushRequest(e.payload.citrus_event,e.payload.citrus_id);
+				}else{
+					PushInitParams  = new Array();
+					PushInitParams["event"] = e.payload.citrus_event;
+					PushInitParams["id"] = e.payload.citrus_id;
+				}
+			}
+		}
+			break;
+			
+		default:
+			break;
+	}
 }
 
 
