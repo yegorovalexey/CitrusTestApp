@@ -37,8 +37,7 @@ top: 1px;*/
  h2 {
 margin-top: 0.9rem;
 margin-bottom: 0.9rem;
-font-size:1rem;
-font-weight: 600 !important;
+font-size:1.4rem;
 }
 .product-card-code-cr {
 margin-bottom: 1rem;
@@ -279,7 +278,7 @@ background-color: #FFFFFF;
 }
 .owl-carousel-product-card .item{
 	max-height: 600px;
-height: 200px;
+height: 300px;
 display: table;
 width: 100%;
 }
@@ -291,7 +290,7 @@ text-align: center;
 vertical-align: middle;
 }
 .owl-carousel-product-card .owl-item{
-	height: 200px
+	height: 300px
 }
 .owl-carousel-product-card  .owl-item img{
 	width: auto !important;
@@ -300,7 +299,7 @@ vertical-align: middle;
 	max-width: 100%;
 }
 #product-card-images {
-	height: 200px;
+	height: 300px;
 }
 #main .ui-content, #search-page .ui-content{
 	padding-top: 0;
@@ -474,7 +473,7 @@ margin-top: 2.5rem;
 
 }
 .variation_list_contaner {
-margin-bottom: -6px;
+margin-bottom: 16px;
 }
 .variation_type_name {
 
@@ -492,11 +491,11 @@ overflow: hidden;
 float: left;
 position: relative;
 top: 0.6rem;
-font-size: 1rem;
+font-size: 1.2rem;
 }
 .prices_item_value {
 float: right;
-font-size: 1.6rem;
+font-size: 2rem;
 color: #F47317 !important;
 }
 .pre_sup {
@@ -509,7 +508,7 @@ top: 2px;
 float: left;
 }
 .owl-controls {
-margin-top: 0px;
+margin-top: 10px;
 text-align: center;
 -webkit-tap-highlight-color: transparent;
 }
