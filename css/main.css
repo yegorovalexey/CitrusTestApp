@@ -914,3 +914,24 @@ border-bottom: 1px solid #C8C7CC;
 .owl-carousel-product-card .item img {
     max-height: 200px;
 }
+
+
+#search-page .s_button {
+    background-color: #62B815 !important;
+    position: absolute;
+    right: 6px;
+    top: 9px;
+    border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    height: 31px;
+    color: rgb(255, 255, 255);
+    padding: 6px 10px 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor:  pointer;
+}
+.ui-input-text input, .ui-input-search input {
+    padding-right: 90px;
+}

@@ -53,7 +53,12 @@ $( document ).on( "pagecreate", "#search-page", function() {
 		//on keydown, clear the countdown 
 		$('#search-page-search-input').keydown(function(){
 		    clearTimeout(typingTimer);
-		}); 
+		});
+        //on keydown, clear the countdown
+        $('#seach-input-button').on("click",function(){
+            clearTimeout(typingTimer);
+            InitSearch();
+        });
 });
 // Эвент создания страницы Jquery Mobile
 
