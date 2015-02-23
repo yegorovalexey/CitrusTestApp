@@ -404,7 +404,9 @@ $( document ).on( "pageshow", "#loader", function() {
 
 
 
-
+function handleOpenURL(url) {
+    console.log("received url: " + url);
+}
 
 
 
