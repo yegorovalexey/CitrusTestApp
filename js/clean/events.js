@@ -1,18 +1,17 @@
 ﻿
 $(document).on('pageshow', '[data-role=page], [data-role=dialog]', function (event, ui) {
 
-    if(MobileUser.CitrusMobileReady){
+
+    try {
+
         GA_track(window.location.hash);
+
+    } catch (err) {
+        console.log("GA_track error:");
+        console.log(err);
     }
 
-    /*try {
-        if ($.mobile.activePage.attr("data-url")) {
-            //ga('send', 'pageview', window.location.hash); // remove quotes
 
-        } else {
-            //ga('send', 'pageview');
-        }
-    } catch (err) {}*/
 });
 
 // GoogleAnalytics
