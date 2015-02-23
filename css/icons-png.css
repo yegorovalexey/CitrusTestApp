@@ -29,6 +29,9 @@ float: left;
 /* Icon classes for HEADER  */
 .c_menu {
 background-image: url(/img/png/white/ico-32.png);
+    position: relative;
+    top: 2px;
+    left:2px;
 }
 .c_back {
     background-image: url(/img/png/white/ico-02_back.png);

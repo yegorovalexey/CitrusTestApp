@@ -29,6 +29,9 @@ float: left;
 /* Icon classes for HEADER  */
 .c_menu {
 background-image: url(../img/svg/white/ico-32.svg);
+    position: relative;
+    top: 2px;
+    left:2px;
 }
 .c_back {
     background-image: url(../img/svg/white/ico-02_back.svg);
@@ -57,6 +60,8 @@ background-image: url(../img/svg/white/ico-04.svg);
 }
 .c_home {
 background-image: url(../img/svg/white/ico-22.svg);
+    position: relative;
+    top: 3px;
 }
 .c_catalog {
 background-image: url(../img/svg/white/ico-10.svg);
