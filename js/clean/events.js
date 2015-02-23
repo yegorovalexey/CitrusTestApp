@@ -1,6 +1,10 @@
 ﻿
 $(document).on('pageshow', '[data-role=page], [data-role=dialog]', function (event, ui) {
-    GA_track(window.location.hash);
+
+    if(MobileUser.CitrusMobileReady){
+        GA_track(window.location.hash);
+    }
+
     /*try {
         if ($.mobile.activePage.attr("data-url")) {
             //ga('send', 'pageview', window.location.hash); // remove quotes
