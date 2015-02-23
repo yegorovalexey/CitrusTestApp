@@ -237,7 +237,7 @@ function LoadDefaultCatalog(category,position){
 			 
 			  
 		 }, 
-	  timeout: 5000 ,
+	  timeout: 10000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		
 			
@@ -520,7 +520,7 @@ function loadProductCard(id,owl){
 			
 			
 		}, 
-	  timeout: 5000 ,
+	  timeout: 10000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		
 			
@@ -1056,7 +1056,7 @@ function ShowFilter(link,back){
 			//$('#cart-list').html(cart_items).listview("refresh");
 			$.mobile.loading( "hide" );
 	  }, 
-	  timeout: 5000 ,
+	  timeout: 10000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		
 			ShowMessage(1);
@@ -1104,7 +1104,7 @@ function ShowFilterEnums(id,name){
 			}
 			$.mobile.loading( "hide" );
 	  }, 
-	  timeout: 5000 ,
+	  timeout: 10000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		
 			ShowMessage(1);
@@ -1259,7 +1259,7 @@ function InitShopList(){
 			 ProssedTapEvents();			 
 
 		 }, 
-	  timeout: 5000 ,
+	  timeout: 10000 ,
 	  error: function(jqXHR, status, errorThrown){   //the status returned will be "timeout" 
 		 if(status == "timeout"){
 		 	ShowMessage(1);
