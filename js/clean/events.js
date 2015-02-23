@@ -409,7 +409,12 @@ function handleOpenURL(url) {
     console.log("received url: " + url);
     var url_to = url.toLowerCase().replace("citrus://","").replace("http://","").replace("https://","").replace("http","").replace("//","").replace("&","").replace(" ","");
     console.log("url_to: " + url_to);
-    $.mobile.changePage( url_to );
+    if(url_to.indexOf('#product-card?product-id=')==0){
+        window.location = url_to;
+    }else{
+        $.mobile.changePage( url_to );
+    }
+
 }
 
 
