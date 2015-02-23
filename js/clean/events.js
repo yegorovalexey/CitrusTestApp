@@ -405,7 +405,11 @@ $( document ).on( "pageshow", "#loader", function() {
 
 
 function handleOpenURL(url) {
+
     console.log("received url: " + url);
+    var url_to = url.toLowerCase().replace("citrus://","").replace("&","").replace(" ","");
+    console.log("url_to: " + url_to);
+    $.mobile.changePage( url_to );
 }
 
 
