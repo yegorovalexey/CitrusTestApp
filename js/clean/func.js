@@ -893,11 +893,12 @@ function OnMakeOrderDone(json){
 	if(json.order_id != undefined){
 		// ORDER is DONE
 		
-        GA_addTransaction(json.order_id,'Цитрус',lastBasketTotal,'','');
+        GA_addTransaction(json.order_id,'Цитрус',lastBasketTotal,0,0,'USD');
 
 		if(lastBasket != undefined && lastBasket.length > 0){
 			$.each( lastBasket, function( key, value ) {
-                GA_addTransactionItem(json.order_id,value.name,value.id,'',value.price,value.qnt);
+                GA_addTransactionItem(json.order_id,value.name,value.id,'',value.price,value.qnt,'USD');
+                console.log("order_id "+json.order_id+" name - "+value.name+" id- "+value.id+" - "+''+" price- "+value.price+" qnt- "+value.qnt+" - "+'USD');
 			});
 		}
 
