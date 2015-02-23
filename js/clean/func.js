@@ -649,6 +649,9 @@ function LoadMainPageData(){
 					if(value.type =="product"){
 						link = 'href="#product-card?product-id='+value.product_id+'"';
 					}
+                    if(value.type =="text"){
+                        link = 'href="#text-page?id='+value.text_id+'"';
+                    }
 					 
 					images += '<div class="item"><a '+link+' data-ajax=false><img class="owl-lazy gas" gac="InnerBanner" gaa="TopSliderClick" gam="'+value.name+'"  data-src="'+value.image+'"></a></div>';
 				});
