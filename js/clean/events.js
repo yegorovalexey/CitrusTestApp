@@ -1,13 +1,14 @@
 ﻿
 $(document).on('pageshow', '[data-role=page], [data-role=dialog]', function (event, ui) {
-    try {
+    GA_track(window.location.hash);
+    /*try {
         if ($.mobile.activePage.attr("data-url")) {
             //ga('send', 'pageview', window.location.hash); // remove quotes
-            GA_track(window.location.hash);
+
         } else {
             //ga('send', 'pageview');
         }
-    } catch (err) {}
+    } catch (err) {}*/
 });
 
 // GoogleAnalytics
