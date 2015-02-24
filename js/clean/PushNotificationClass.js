@@ -37,6 +37,12 @@ function errorHandler (error) {
 	console.log(result);
    
 }
+function tokenHandler (result) {
+    // Your iOS push server needs to know the token before it can push to this device
+    // here is where you might want to send it the token for later use.
+    console.log('device token = ' + result);
+    RegisterDevice(result,"apple");
+}
 
 // handle GCM notifications for Android
 

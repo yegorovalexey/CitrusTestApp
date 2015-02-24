@@ -1162,8 +1162,8 @@ function LoadSortItems(){
 
 
 function Enums(){
-	this.sort_values = {0:"",2:"price_asc",3:"price_desc",4:"new_first"};
-	this.sort_names = {0:"Сначала рекомендованные",2:"От дешевых к дорогим",3:"От дорогих к дешевым",4:"Сначала новинки"};
+    this.sort_values = {0:"",2:"price_asc",3:"price_desc",4:"new_first",5:"by_name"};
+    this.sort_names = {0:"Сначала рекомендованные",2:"От дешевых к дорогим",3:"От дорогих к дешевым",4:"Сначала новинки",5:"по алфавиту"};
 	this.active_sort = "0";
 	this.active_sort_temp = "0";
 	this.active_prop_id = 0;
