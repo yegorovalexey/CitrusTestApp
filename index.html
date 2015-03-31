@@ -69,9 +69,9 @@
     <div data-role="panel" data-display="push" data-theme="b"  id="nav-panel" class="jqm-navmenu-panel" data-position-fixed="true">
         <ul data-role="listview"  data-inset="true">
             <li><a href="#main" onclick="CheckHrefChange(this)"  data-role="button" class="panel-menu-item"  ><i class="c_icon c_home"></i><div class="text">Главная</div></a></li>
-            <li><a href="#products-list" onclick="CheckHrefChange(this)"   data-role="button"   class="panel-menu-item"   ><i class="c_icon c_catalog"></i><div class="text">Каталог товаров</div></a></li>
-            <li><a href="#search-page" onclick="CheckHrefChange(this)"    class="panel-menu-item"   data-role="button"  ><i class="c_icon c_search"></i><div class="text">Поиск</div></a></li>
-            <li><a href="#actions-page" onclick="CheckHrefChange(this)"    data-role="button"   class="panel-menu-item"   ><i class="c_icon c_action"></i><div class="text">Акции</div></a></li>
+            <li class="world"><a href="#products-list" onclick="CheckHrefChange(this)"   data-role="button"   class="panel-menu-item"   ><i class="c_icon c_catalog"></i><div class="text">Каталог товаров</div></a></li>
+            <li ><a href="#search-page" onclick="CheckHrefChange(this)"    class="panel-menu-item"   data-role="button"  ><i class="c_icon c_search"></i><div class="text">Поиск</div></a></li>
+            <li  class="world"><a href="#actions-page" onclick="CheckHrefChange(this)"    data-role="button"   class="panel-menu-item"   ><i class="c_icon c_action"></i><div class="text">Акции</div></a></li>
             <li><a href="#news-page" onclick="CheckHrefChange(this)"    data-role="button"   class="panel-menu-item"   ><i class="c_icon c_news"></i><div class="text">Новости</div></a></li>
             <li><a href="#page-cart" onclick="CheckHrefChange(this)"   data-role="button"   class="panel-menu-item"    ><i class="c_icon c_basket_simple"></i><div class="text">Корзина</div></a></li>
 
@@ -106,10 +106,10 @@
 
         <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview">
         </ul>
-        <div class="product-card-module-cr ">
+        <div class="product-card-module-cr world">
             <a href="#products-list"><div id="product-card-info" class="product-card-module main-module module first link"><i class="c_icon c_catalog gray main_page_icon"></i>Все товары</div></a>
         </div>
-        <div class="product-card-module-cr  module-close">
+        <div class="product-card-module-cr  module-close world">
             <div id="product-card-info" class="product-card-module main-module module"  onclick="moduletoggle(this);"><i class="c_icon c_lider gray main_page_icon"></i>Лидеры продаж</div>
             <div class="product-card-info-content" style="display: none;">
                 <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-lead">
@@ -117,7 +117,7 @@
                 </ul>
             </div>
         </div>
-        <div class="product-card-module-cr  module-close" >
+        <div class="product-card-module-cr  module-close world" >
             <div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_super gray main_page_icon"></i>Суперцена</div>
             <div class="product-card-info-content"  style="display: none;">
                 <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-super">
@@ -125,7 +125,7 @@
                 </ul>
             </div>
         </div>
-        <div class="product-card-module-cr  module-close" >
+        <div class="product-card-module-cr  module-close world" >
             <div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_new gray main_page_icon"></i>Новинки</div>
             <div class="product-card-info-content"  style="display: none;">
                 <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-new">
@@ -133,7 +133,7 @@
                 </ul>
             </div>
         </div>
-        <div class="product-card-module-cr module-close last" >
+        <div class="product-card-module-cr module-close last world" >
             <div id="product-card-info" class="product-card-module main-module"  onclick="moduletoggle(this);"><i class="c_icon c_soon gray main_page_icon"></i>Скоро в продаже</div>
             <div class="product-card-info-content">
                 <ul data-role="listview" data-theme="b" data-2inset="true" id="main-listview-soon">
@@ -143,10 +143,22 @@
             </div>
         </div>
         <div class="product-card-module-cr ">
-            <a href="#actions-page"><div id="product-card-info" class="product-card-module main-module module link"><i class="c_icon c_action gray main_page_icon"></i>Наши акции</div></a>
+            <a href="#actions-page"><div  class="product-card-module main-module module link"><i class="c_icon c_action gray main_page_icon"></i>Наши акции</div></a>
         </div>
         <div class="product-card-module-cr last">
-            <a href="#news-page"><div id="product-card-info" class="product-card-module main-module module link"><i class="c_icon c_news gray main_page_icon"></i>Новости</div></a>
+            <a href="#news-page"><div  class="product-card-module main-module module link"><i class="c_icon c_news gray main_page_icon"></i>Новости</div></a>
+        </div>
+        <div class="product-card-module-cr last">
+            <a href="#shoplist-page"><div  class="product-card-module main-module module link"><i class="c_icon c_shops gray main_page_icon"></i>Наши магазины</div></a>
+        </div>
+        <div class="product-card-module-cr last">
+            <a  onclick="window.open('http://m.citrus.ua/online.html', '_system', 'location=yes');return false;"><div  class="product-card-module main-module module link"><i class="c_icon c_online gray main_page_icon"></i>Онлайн консультант</div></a>
+        </div>
+        <div class="product-card-module-cr last">
+            <a  onclick="window.open('http://club.citrus.ua/', '_system', 'location=yes');return false;"><div  class="product-card-module main-module module link"><i class="c_icon c_club gray main_page_icon"></i>Цитрус клуб</div></a>
+        </div>
+        <div class="product-card-module-cr last">
+            <a  onclick="window.open('http://support.citrus.ua/', '_system', 'location=yes');return false;"><div  class="product-card-module main-module module link"><i class="c_icon c_contactus gray main_page_icon"></i>Обратная связь</div></a>
         </div>
         <div style="text-align: center;padding:16px">
             <h2>Служба поддержки клиентов</h2>

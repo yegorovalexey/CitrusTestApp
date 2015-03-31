@@ -690,6 +690,10 @@ function LoadMainPageData(){
 			 
 						
 				});
+                if(json.top_goods.length ==0){
+                    $('.world').hide();
+                }
+                $('.world').hide();
 				ProssedTapEvents();
 				$.mobile.loading( "hide" );
 			}
